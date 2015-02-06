@@ -1,0 +1,26 @@
+LINUX :
+Créer le dossier Git en le clonant :
+
+>git clone https://github.com/INSALyon-FilRouge-2014/JeuMusical.git
+
+Cela va placer le dossier Git dans le dossier courant.
+
+Ajouter des fichiers au suivi de version :
+
+>git add monFichier
+
+Le fichier sera ajouté au suivi et sera donc envoyé sur le serveur Git
+Renommer un fichier et conserver son suivi Git
+
+>git mv nomDuFichier nouveauNomDuFichier
+
+Le nom du fichier sera aussi mis a jour sur le serveur Git
+
+Ne plus suivre un fichier en le supprimant
+
+>git rm monFichier
+
+Le fichier sera également supprimé du serveur Git
+
+
+WINDOWS :
