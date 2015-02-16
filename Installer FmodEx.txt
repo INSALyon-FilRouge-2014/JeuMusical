@@ -1,0 +1,27 @@
+Installer FmodEx
+----------------
+
+1. Telecharger à 
+	http://www.fmod.org/browse-fmod-ex-api/
+	La version 44450 (dernière) qui vous correspond
+
+2. Dans C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\lib\ 
+	Prendre la Bibliotheque qui correspond a votre compilateur (détails dans "which library do I use.txt")
+		Ex: Moi c'est Code::Blocks avec le compilateur MinGW
+			La bibliothèque qui me correspond est donc : libfmodex.a
+			je copie ce fichier dans les librairies de mon compilateur ( C:\Program Files (x86)\CodeBlocks\MinGW\lib\ pour moi )
+	On peut maintenant compiler avec la bibliothèque (ne pas oublier de l'ajouter pour dans la ligne de commande de compilation, ou de dire à l'IDE de l'ajouter lui même)
+
+3. Pour l'utiliser dans le code on include fmod.h (.h présents dans C:\Program Files (x86)\FMOD SoundSystem\FMOD Programmers API Windows\api\inc\) pour ça 2 solutions
+	3.1	Copier ces .h dans les includes systèmes :
+		Ex: Pour moi avec CodeBlocks je fais un dossier fmodex dans les includes de mon compilateur
+			et je copie les interfaces dans C:\Program Files (x86)\CodeBlocks\MinGW\include\fmodex\
+		pour les utiliser dans le code je fais donc #include <fmodex/fmod.h>
+	3.2 Copier ces .h dans le dossier du projet :
+		faire par exemple un dossier a part dans le projet appelé fmodex.
+		pour les utiliser dans le code je fais donc #include "fmodex/fmod.h"
+
+4. Pour lancer l'execution il faut copier le "fmodex.dll" dans le même dossier que l'executable (/!\ pour CodeBlocks c'est le dossier du .cbp)
+
+
+NB: J'ai eu des pb en voulant compiler sous c++11. dites moi si ça vous pose aussi un pb on trouvera une solution :P
