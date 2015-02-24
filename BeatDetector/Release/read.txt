@@ -1,0 +1,5 @@
+The audio file must be a parameter of BeatDetector.exe to work.
+On Windows, simply drag and drop your audio file on the BeatDetector.exe icon, with fmodex.dll in the same folder.
+
+
+barsichou@yahoo.fr
