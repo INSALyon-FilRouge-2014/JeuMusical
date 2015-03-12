@@ -9,8 +9,8 @@ using namespace std;
 using namespace sf;
 
 const int POS_VIEW = 300;
-const int SIZE_SPRITE_X = 180;
-const int SIZE_SPRITE_Y = 248;
+const int SIZE_SPRITE_X = 64;
+const int SIZE_SPRITE_Y = 96;
 const int SIZE_WINDOW_Y = 640;
 const int SIZE_WINDOW_X = 1024;
 
@@ -24,8 +24,9 @@ Character::Character(void)
 	actualSprite->setOrigin((float)SIZE_SPRITE_X/2,(float)SIZE_SPRITE_Y);
 	actualSprite->setPosition((float)SIZE_SPRITE_X/2,(float)SIZE_WINDOW_Y);
 	updateClock.restart();
-	posx = SIZE_SPRITE_X / 2;
-	posy = SIZE_WINDOW_Y - 60;
+	pos.x = SIZE_SPRITE_X / 2;
+	pos.y = SIZE_WINDOW_Y - 64;
+
 
 }
 
@@ -44,7 +45,7 @@ void Character::HandleEvent(RenderWindow &window)
 	case Event::KeyPressed:
 		if (actualState != jumpState)
 		{
-			jumpState->Init();
+			jumpState->Init(-30);
 			actualState = jumpState;
 		}
 		break;
@@ -59,18 +60,21 @@ void Character::Update()
 
 
 	// mise a jour de la texture du sprite toutes les 0.05s
-	if(updateClock.getElapsedTime()>=Time(milliseconds(50)))
+
+	if (pos.y >(SIZE_WINDOW_Y - 64))
 	{
-		actualState->Update(*this);
-		actualSprite->setPosition(posx, posy);
-		updateClock.restart();
-	}
-	if (posy >SIZE_WINDOW_Y - 60)
-	{
-		posy = SIZE_WINDOW_Y - 60;
+		pos.y = SIZE_WINDOW_Y - 64;
+		
 		runState->Init();
 		actualState = runState;
 	}
+	if(updateClock.getElapsedTime()>=Time(milliseconds(20)))
+	{
+		actualState->Update(*this);
+		actualSprite->setPosition(pos.x, pos.y);
+		updateClock.restart();
+	}
+
 }
 
 
@@ -78,23 +82,24 @@ void Character::Draw(RenderWindow & window)
 {
 
 	sf::View currentView = window.getView();
-	currentView.setCenter(posx + POS_VIEW,SIZE_WINDOW_Y/2);
+	currentView.setCenter(pos.x + POS_VIEW,SIZE_WINDOW_Y/2);
 	window.setView(currentView);
 	window.draw(*actualSprite);
-
 }
 
 void Character::Move(int x, int y)
 {
-	posx += x;
-	posy += y;
-	
+
+	pos.x += x;
+	pos.y += y;
+
 
 }
 
 void Character::SetSprite(Sprite* sprite)
 {
 	actualSprite = sprite;
+	actualSprite->setPosition(pos.x, pos.y);
 
 }
 

@@ -3,9 +3,12 @@
 #include "Character.h"
 #include "Map.h"
 
+#include <iostream>
+using namespace std;
 using namespace sf;
 int main()
 {
+	cout << "bonjour" << endl;
 	sf::RenderWindow window(sf::VideoMode(1024, 640), "SFML works!");
 
 	window.setFramerateLimit(60);
@@ -23,11 +26,16 @@ int main()
     {
 		c1.HandleEvent(window);
 		c1.Update();
+	
         window.clear();
 		m1.Draw(window);
 		c1.Draw(window);
-		
-        window.display();
+		if (m1.Collision(c1))
+		{
+			return 0;
+
+		}
+		window.display();
     }
 
     return 0;
