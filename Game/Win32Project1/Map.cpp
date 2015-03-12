@@ -9,6 +9,7 @@ const std::string MAP_TEXTURE = "fond.png";
 const std::string PLATFORM_TEXTURE = "platform.png";
 const std::string SOL_TEXTURE = "Sol.png";
 const int MAP_SIZE = 1024;
+const int SIZE_WINDOW_Y = 640;
 using namespace sf;
 Map::Map()
 {
@@ -34,19 +35,63 @@ Map::Map()
 	{
 		// error...
 	}
-	platformtab = new Platform*[64];
+	platformtab = new Platform*[500];
 
 	for (int i = 0; i < 32; i++)
 	{
 		platformtab[i] = new Platform(&platTexture, i, 3);
 
 	}
-	for (int i = 32; i < 64; i++)
+
+	for (int i = 32; i < 34; i++)
+	{
+		platformtab[i] = new Platform(&platTexture, i, 9);
+
+	}
+	for (int i = 34; i < 50; i++)
 	{
 		platformtab[i] = new Platform(&platTexture, i, 8);
 
 	}
+	for (int i = 50; i < 52; i++)
+	{
+		platformtab[i] = new Platform(&platTexture, i, 7);
 
+	}
+	for (int i = 52; i < 65; i++)
+	{
+		platformtab[i] = new Platform(&platTexture, i, 7);
+
+	}
+	for (int i = 65; i < 68; i++)
+	{
+		platformtab[i] = new Platform(&platTexture, i, 6);
+
+	}
+
+	for (int i = 68; i < 70; i++)
+	{
+		platformtab[i] = new Platform(&platTexture, i, 6);
+
+	}
+
+	for (int i = 70; i < 80; i++)
+	{
+		platformtab[i] = new Platform(&platTexture, i, 5);
+
+	}
+
+	for (int i = 80; i < 81; i++)
+	{
+		platformtab[i] = new Platform(&platTexture, i, 5);
+
+	}
+
+	for (int i = 81; i < 500; i++)
+	{
+		platformtab[i] = new Platform(&platTexture, i, 8);
+
+	}
 
 }
 
@@ -81,7 +126,7 @@ void Map::Draw(sf::RenderWindow &window)
 	window.draw(solSprite1);
 	window.draw(solSprite2);
 	float posp;
-	for (int i = 0; i < 64; i++)
+	for (int i = 0; i < 500; i++)
 	{
 		posp = platformtab[i]->GetPos().x;
 		if ((posp >(pos) -60) && (posp < (pos + MAP_SIZE + 60)))
@@ -99,9 +144,29 @@ bool Map::Collision(Character& hero)
 	{
 		if (herobox.intersects(platformtab[i]->GetHitBox()))
 		{
-			return true;
+
+			if (hero.GetPos().y >(platformtab[i]->GetPos().y) - 32)
+			{
+				//cout << "collision ! " << endl;
+				return true;
+			}
+			else
+			{
+				//cout << "etat run" << endl;
+				if (hero.GetState()->AscOrDesc())
+				{
+					hero.SetPos(poshero, platformtab[i]->GetPos().y - 63);
+					hero.SetRunState();
+				}
+				return false;
+			}
 		}
 
+	}
+	//cout << "pas de collision" << endl;
+	if (hero.GetPos().y < SIZE_WINDOW_Y - 64)
+	{
+		hero.SetJumpState(0);
 	}
 	return false;
 

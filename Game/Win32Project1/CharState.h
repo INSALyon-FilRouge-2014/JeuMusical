@@ -22,6 +22,7 @@ public:
 	virtual CharState* HandleEvent(sf::Event &) ;//traite les evenements
 	virtual void Update(Character & ) ;//modifie les caracteristiques du personnage
 	virtual ~CharState();
+	bool AscOrDesc(){ return v_y >= 0; };
 
 private:
 

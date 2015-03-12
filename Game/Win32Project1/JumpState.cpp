@@ -58,6 +58,7 @@ CharState* JumpState::HandleEvent(sf::Event & event)
 
 void JumpState::Update(Character & hero)
 {
+
 	v_y += GRAV;
 	stateSprite->setTextureRect(IntRect((numberOfSprite % 5)*SIZE_SPRITE_X, ((int)numberOfSprite / 5)*SIZE_SPRITE_Y, SIZE_SPRITE_X, SIZE_SPRITE_Y));
 	numberOfSprite = (numberOfSprite + 1) % 10;

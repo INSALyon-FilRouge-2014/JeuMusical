@@ -25,15 +25,15 @@ int main()
 	while (window.isOpen())
     {
 		c1.HandleEvent(window);
-		c1.Update();
-	
+		c1.Update(m1);
+		//c1.GetState();
         window.clear();
 		m1.Draw(window);
 		c1.Draw(window);
 		if (m1.Collision(c1))
 		{
-			return 0;
-
+			cout << "perdu" << endl;
+			//sleep(seconds(1));
 		}
 		window.display();
     }
