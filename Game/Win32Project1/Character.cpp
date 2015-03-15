@@ -26,8 +26,8 @@ Character::Character(void)
 	actualSprite->setOrigin((float)SIZE_SPRITE_X/2,(float)SIZE_SPRITE_Y);
 	actualSprite->setPosition((float)SIZE_SPRITE_X/2,(float)SIZE_WINDOW_Y);
 	updateClock.restart();
-	pos.x = SIZE_SPRITE_X / 2;
-	pos.y = SIZE_WINDOW_Y - 64;
+	pos.x = SIZE_WINDOW_X / 2;
+	pos.y = SIZE_WINDOW_Y - 128;
 
 
 }
@@ -60,15 +60,15 @@ void Character::Update(Map & level)
 	// mise a jour de la texture du sprite toutes les 0.05s
 
 
-	if(updateClock.getElapsedTime()>=Time(milliseconds(20)))
+	if(updateClock.getElapsedTime()>=Time(milliseconds(10)))
 	{
 		actualState->Update(*this);
 		actualSprite->setPosition(pos.x, pos.y);
 		updateClock.restart();
 	}
-	if (pos.y >(SIZE_WINDOW_Y - 64))
+	if (pos.y >(SIZE_WINDOW_Y - 128))
 	{
-		pos.y = SIZE_WINDOW_Y - 64;
+		pos.y = SIZE_WINDOW_Y - 128;
 
 		runState->Init();
 		actualState = runState;

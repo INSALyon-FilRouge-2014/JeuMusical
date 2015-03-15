@@ -5,16 +5,17 @@
 using namespace std;
 //const std::string MAP_TEXTURE = "map.jpg";
 
-const std::string MAP_TEXTURE = "fond.png";
-const std::string PLATFORM_TEXTURE = "platform.png";
+const std::string MAP_TEXTURE = "fond1.png";
+const std::string PLATFORM_TEXTURE = "box2.png";
 const std::string SOL_TEXTURE = "Sol.png";
-const int MAP_SIZE = 1024;
+const int MAP_SIZE = 6012;
 const int SIZE_WINDOW_Y = 640;
 using namespace sf;
 Map::Map()
 {
 	if (!mapTexture.loadFromFile(MAP_TEXTURE))
 	{
+		cout << "erreur de chargement de MAP" << endl;
 		// error...
 	}
 	mapSprite1.setTexture(mapTexture);
@@ -22,7 +23,7 @@ Map::Map()
 	mapSprite2.setTexture(mapTexture);
 	mapSprite2.setPosition(MAP_SIZE, 0);
 
-	if (!solTexture.loadFromFile(SOL_TEXTURE))
+	/*if (!solTexture.loadFromFile(SOL_TEXTURE))
 	{
 		// error...
 	}
@@ -30,7 +31,7 @@ Map::Map()
 	solSprite1.setPosition(0, 576);
 	solSprite2.setTexture(solTexture);
 	solSprite2.setPosition(MAP_SIZE, 576);
-	
+	*/
 	if (!platTexture.loadFromFile(PLATFORM_TEXTURE))
 	{
 		// error...
@@ -116,8 +117,8 @@ void Map::Draw(sf::RenderWindow &window)
 	{
 		mapSprite1 = mapSprite2;
 		mapSprite2.setPosition(mapSprite1.getPosition().x + MAP_SIZE, 0);
-		solSprite1 = solSprite2;
-		solSprite2.setPosition(solSprite1.getPosition().x + MAP_SIZE, 576);
+		//solSprite1 = solSprite2;
+		//solSprite2.setPosition(solSprite1.getPosition().x + MAP_SIZE, 576);
 	}
 
 	window.draw(mapSprite1);
@@ -164,7 +165,7 @@ bool Map::Collision(Character& hero)
 
 	}
 	//cout << "pas de collision" << endl;
-	if (hero.GetPos().y < SIZE_WINDOW_Y - 64)
+	if (hero.GetPos().y < SIZE_WINDOW_Y - 128)
 	{
 		hero.SetJumpState(0);
 	}

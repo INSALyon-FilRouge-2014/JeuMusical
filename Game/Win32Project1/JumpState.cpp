@@ -3,14 +3,14 @@
 #include <SFML\Graphics.hpp>
 
 static const int GRAV = 3;
-static const int MOVE_SPEED = 15;
+static const int MOVE_SPEED = 10;
 static const int V_Y = -30;
 const int SIZE_SPRITE_X = 64;
 const int SIZE_SPRITE_Y = 96;
 
 using namespace sf;
 
-const std::string CHARACTER_TEXTURE = "Char.png";
+const std::string CHARACTER_TEXTURE = "jump.png";
 
 JumpState::JumpState()
 {
@@ -60,9 +60,9 @@ void JumpState::Update(Character & hero)
 {
 
 	v_y += GRAV;
-	stateSprite->setTextureRect(IntRect((numberOfSprite % 5)*SIZE_SPRITE_X, ((int)numberOfSprite / 5)*SIZE_SPRITE_Y, SIZE_SPRITE_X, SIZE_SPRITE_Y));
+	/*stateSprite->setTextureRect(IntRect((numberOfSprite % 5)*SIZE_SPRITE_X, ((int)numberOfSprite / 5)*SIZE_SPRITE_Y, SIZE_SPRITE_X, SIZE_SPRITE_Y));
 	numberOfSprite = (numberOfSprite + 1) % 10;
-	updateClock.restart();
+	updateClock.restart();*/
 	hero.SetSprite(stateSprite);
 	hero.Move(v_x, v_y);
 	

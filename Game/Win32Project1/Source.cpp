@@ -17,6 +17,7 @@ int main()
 	Character c1;
 	c1.Draw(window);
 	View vue(FloatRect(0,320,1024,640));
+	vue.setCenter(512, 320);
 
 	Map m1;
 
