@@ -60,7 +60,7 @@ void Character::Update(Map & level)
 	// mise a jour de la texture du sprite toutes les 0.05s
 
 
-	if(updateClock.getElapsedTime()>=Time(milliseconds(10)))
+	if(updateClock.getElapsedTime()>=Time(milliseconds(20)))
 	{
 		actualState->Update(*this);
 		actualSprite->setPosition(pos.x, pos.y);
@@ -93,6 +93,13 @@ void Character::Move(int x, int y)
 	pos.x += x;
 	pos.y += y;
 
+
+}
+
+void Character::Replace()
+{
+	pos.x = 50;
+	pos.y = 500;
 
 }
 
@@ -129,5 +136,6 @@ void Character::SetJumpState(int v_init)
 
 Character::~Character(void)
 {
-	delete actualState;
+	delete runState;
+	delete jumpState;
 }

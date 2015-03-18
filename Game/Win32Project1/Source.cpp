@@ -26,14 +26,19 @@ int main()
 	while (window.isOpen())
     {
 		c1.HandleEvent(window);
+		/*if (cl.getElapsedTime()>Time(seconds(1)))
+		{
+			sleep(Time(seconds(5)));
+			cl.restart();
+		}*/
 		c1.Update(m1);
-		//c1.GetState();
         window.clear();
 		m1.Draw(window);
 		c1.Draw(window);
 		if (m1.Collision(c1))
 		{
 			cout << "perdu" << endl;
+			c1.Replace();
 			//sleep(seconds(1));
 		}
 		window.display();

@@ -3,8 +3,8 @@
 #include <SFML\Graphics.hpp>
 
 static const int GRAV = 3;
-static const int MOVE_SPEED = 10;
-static const int V_Y = -30;
+static const int MOVE_SPEED = 13;
+static const int V_Y = -40;
 const int SIZE_SPRITE_X = 64;
 const int SIZE_SPRITE_Y = 96;
 

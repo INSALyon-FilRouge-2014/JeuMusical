@@ -38,25 +38,44 @@ Map::Map()
 	}
 	platformtab = new Platform*[500];
 
-	for (int i = 0; i < 32; i++)
+	for (int i = 0; i < 15; i++)
 	{
 		platformtab[i] = new Platform(&platTexture, i, 3);
 
 	}
-
-	for (int i = 32; i < 34; i++)
-	{
-		platformtab[i] = new Platform(&platTexture, i, 9);
-
-	}
-	for (int i = 34; i < 50; i++)
+	for (int i = 15; i < 20; i++)
 	{
 		platformtab[i] = new Platform(&platTexture, i, 8);
 
 	}
-	for (int i = 50; i < 52; i++)
+	for (int i = 20; i < 23; i++)
 	{
 		platformtab[i] = new Platform(&platTexture, i, 7);
+
+	}
+	for (int i = 23; i < 25; i++)
+	{
+		platformtab[i] = new Platform(&platTexture, i, 6);
+
+	}
+	for (int i = 25; i < 32; i++)
+	{
+		platformtab[i] = new Platform(&platTexture, i, 5);
+
+	}
+	for (int i = 32; i < 34; i++)
+	{
+		platformtab[i] = new Platform(&platTexture, i, 4);
+
+	}
+	for (int i = 34; i < 50; i++)
+	{
+		platformtab[i] = new Platform(&platTexture, i, 6);
+
+	}
+	for (int i = 50; i < 52; i++)
+	{
+		platformtab[i] = new Platform(&platTexture, i, 5);
 
 	}
 	for (int i = 52; i < 65; i++)
@@ -72,23 +91,35 @@ Map::Map()
 
 	for (int i = 68; i < 70; i++)
 	{
-		platformtab[i] = new Platform(&platTexture, i, 6);
+		platformtab[i] = new Platform(&platTexture, i, 5);
 
 	}
 
 	for (int i = 70; i < 80; i++)
 	{
-		platformtab[i] = new Platform(&platTexture, i, 5);
+		platformtab[i] = new Platform(&platTexture, i, 6);
 
 	}
 
-	for (int i = 80; i < 81; i++)
+	for (int i = 80; i < 83; i++)
 	{
 		platformtab[i] = new Platform(&platTexture, i, 5);
 
 	}
 
-	for (int i = 81; i < 500; i++)
+	for (int i = 83; i < 90; i++)
+	{
+		platformtab[i] = new Platform(&platTexture, i, 4);
+
+	}
+
+	for (int i = 90; i < 100; i++)
+	{
+		platformtab[i] = new Platform(&platTexture, i, 6);
+
+	}
+
+	for (int i = 100; i < 500; i++)
 	{
 		platformtab[i] = new Platform(&platTexture, i, 8);
 

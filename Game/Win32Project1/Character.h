@@ -21,6 +21,7 @@ public:
 	void Update(Map &);
 	void Draw(sf::RenderWindow &);
 	void Move(int, int);
+	void Replace();
 	void SetSprite(sf::Sprite*);
 	void SetRunState();
 	void SetJumpState(int);

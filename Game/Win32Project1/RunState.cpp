@@ -5,10 +5,10 @@
 #include "JumpState.h"
 using namespace sf;
 
-static const int MOVE_SPEED = 10;
+static const int MOVE_SPEED = 13;
 const int SIZE_SPRITE_X = 64;
 const int SIZE_SPRITE_Y = 96;
-const std::string CHARACTER_TEXTURE = "sprite.png";
+const std::string CHARACTER_TEXTURE = "Sprite2.png";
 
 RunState::RunState()
 {
