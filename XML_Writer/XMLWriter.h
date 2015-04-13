@@ -10,7 +10,6 @@ class XMLWriter
 {
 public:
 	bool writeObstacle(Obstacle o);
-	//Obstacle read();
 	//constructeur
 	XMLWriter(std::string filename, std::string nom, int longueur, int bpm);
 	//destructeur

@@ -1,5 +1,8 @@
-#ifndef OBSTACLE_H
-#define OBSTACLE_H
+#ifndef OBSTACLE_H_
+#define OBSTACLE_H_
+
+#include <stdio.h>
+#include <stdlib.h>
 
 class Obstacle
 {
