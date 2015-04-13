@@ -28,7 +28,6 @@ int SoundManager::load_song(char *argv)
 	/* On active la répétition de la musique à l'infini */
 	FMOD_Sound_SetLoopCount(musique, -1);
 	FMOD_Sound_GetLength(musique, &length, FMOD_TIMEUNIT_PCM);
-	cout << "taille : " << length << endl;
 	/* on rempli les tableau data_left et data_right avec les données du buffer */
 	void* ptr1;
 	void* ptr2;             // ???

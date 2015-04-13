@@ -85,14 +85,12 @@
     <ClCompile Include="BeatDetector.cpp" />
     <ClCompile Include="LevelGenerator.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SoundManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BeatDetector.h" />
     <ClInclude Include="LevelGenerator.h" />
     <ClInclude Include="Obstacle.h" />
-    <ClInclude Include="Scene.h" />
     <ClInclude Include="SoundManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
