@@ -2,6 +2,7 @@
 
 #include <cmath>
 #include <stdio.h>
+#include <iostream>
 
 using namespace std;
 
@@ -23,10 +24,11 @@ int SoundManager::load_song(char *argv)
 	/* On ouvre la musique */
 	FMOD_System_CreateSound(system, argv, FMOD_SOFTWARE | FMOD_2D, 0, &musique);
 
+	FMOD_Sound_GetLength(musique, &length_MS, FMOD_TIMEUNIT_MS);
 	/* On active la répétition de la musique à l'infini */
 	FMOD_Sound_SetLoopCount(musique, -1);
 	FMOD_Sound_GetLength(musique, &length, FMOD_TIMEUNIT_PCM);
-
+	cout << "taille : " << length << endl;
 	/* on rempli les tableau data_left et data_right avec les données du buffer */
 	void* ptr1;
 	void* ptr2;             // ???
@@ -79,6 +81,11 @@ int* SoundManager::get_right_data()
 unsigned int SoundManager::get_length()
 {
 	return length;
+}
+
+unsigned int SoundManager::get_length_MS()
+{
+	return length_MS;
 }
 
 int SoundManager::get_current_time_PCM()

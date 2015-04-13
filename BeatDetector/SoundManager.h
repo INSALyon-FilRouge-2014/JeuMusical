@@ -1,7 +1,7 @@
 #ifndef SOUNDMANAGER_H
 #define SOUNDMANAGER_H
 
-#include "FMOD/fmod.h"
+#include "fmod.h"
 
 class SoundManager
 {

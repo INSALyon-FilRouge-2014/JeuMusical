@@ -16,6 +16,7 @@ public:
 	int* get_left_data();
 	int* get_right_data();
 	unsigned int get_length();
+	unsigned int get_length_MS();
 	int get_current_time_PCM(); // renvoi le temps en nombre de samples
 	void set_current_time(int PCM);
 	void change_pitch(float val); // change la vitesse de lecture
@@ -29,6 +30,7 @@ private:
 	int* data_right_channel;    // 16 derniers bits
 	float* spectre;
 	unsigned int length;
+	unsigned int length_MS;
 	float pitch;
 };
 

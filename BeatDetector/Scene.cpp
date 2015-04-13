@@ -60,7 +60,7 @@ Scene::Scene(RenderWindow* App, SoundManager* snd_mgr, BeatDetector* beatdec, ch
     if (secondes <10) total_time_string << "0";
     total_time_string << secondes;
 
-    // consreuction de la string des instructions
+    // construction de la string des instructions
     instructions_text.SetText("Play/Pause: P\nReset: R\nScroll: (Ctrl) ArrowKey\nSpeed: +/-\nClick to set position");
 
     // positionnement des textes

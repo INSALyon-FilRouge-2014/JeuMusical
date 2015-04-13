@@ -1,17 +1,17 @@
 #include "SoundManager.h"
 #include "Scene.h"
 #include "BeatDetector.h"
-#include <SFML/Graphics.hpp>
-#include <SFML/Window.hpp>
 #include <sstream>
 
 
 int main(int argc, char *argv[])
 {
+	/*
     // Create main window
     sf::RenderWindow App(sf::VideoMode(800, 600), "Beat detector");
     App.SetPosition(0, 0);
     App.ShowMouseCursor(true);
+	*/
 
     // Create SoundManager
     SoundManager* snd_mng = new SoundManager();
@@ -24,8 +24,9 @@ int main(int argc, char *argv[])
     beatdec->audio_process(); // launch beats detection
 
     // Create Scene
-    Scene Scene(&App, snd_mng, beatdec, argv[1]);
+    //Scene Scene(&App, snd_mng, beatdec, argv[1]);
 
+	/*
     // Set View
     sf::Vector2f Center(0, 0);
     sf::Vector2f HalfSize(400, 300);
@@ -75,7 +76,6 @@ int main(int argc, char *argv[])
                 if (Event.MouseButton.Button == sf::Mouse::Left) Scene.goto_pos(Event.MouseButton.X);
             }
         }
-
         // Clear screen
         App.Clear(sf::Color(0,0,0));
 
@@ -84,6 +84,7 @@ int main(int argc, char *argv[])
 
         // Display
         App.Display();
+		*/
     }
     return EXIT_SUCCESS;
 }

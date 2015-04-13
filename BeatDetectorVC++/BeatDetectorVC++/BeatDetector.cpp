@@ -23,7 +23,11 @@ BeatDetector::BeatDetector(SoundManager* snd_mgr)
 
 BeatDetector::~BeatDetector()
 {
-
+	delete[] energie1024;
+	delete[] energie44100;
+	delete[] conv;
+	delete[] beat;
+	delete[] energie_peak;
 }
 
 int BeatDetector::energie(int* data, int offset, int window)
@@ -129,8 +133,8 @@ void BeatDetector::audio_process(void)
 	}
 	// le tableau T contient tous les laps de temps
 	// fait des stats pour savoir quel est le plus fréquent
-	int T_occ_max = 0;
-	float T_occ_moy = 0.f;
+	int T_occ_max = 0;//l'ecart le plus fréquent entre 2 peak
+	float T_occ_moy = 0.f;//l'ecart le plus fréquent entre 2 peak, calculé plus précisément grace a T_occ_max et son meilleur voisin
 
 	// compte les occurence de chaque laps de temps
 	int occurences_T[86]; // max 2 paquets de 43 d'écart (2sec)
@@ -150,6 +154,7 @@ void BeatDetector::audio_process(void)
 	}
 	// on fait la moyenne du max + son max de voisin pour + de précision
 	int voisin = T_occ_max - 1;
+	//on prend le meilleur entre le voisin de gauche et droite
 	if (occurences_T[T_occ_max + 1]>occurences_T[voisin]) voisin = T_occ_max + 1;
 	float div = occurences_T[T_occ_max] + occurences_T[voisin];
 
@@ -158,7 +163,7 @@ void BeatDetector::audio_process(void)
 
 	// clacul du tempo en BPMs
 	tempo = (int)60.f / (T_occ_moy*(1024.f / 44100.f));
-	cout << "inside audioprocess" << tempo << endl;
+	tempo_f = 60.f / (T_occ_moy*(1024.f / 44100.f));
 	// Calcul de la Beat line
 	// ----------------------
 	// création d'un train d'impulsions (doit valoir 1 tous les T_occ_moy et 0 ailleurs)
@@ -170,13 +175,14 @@ void BeatDetector::audio_process(void)
 		if (espace >= T_occ_moy)
 		{
 			train_dimp[i] = 1;
+			//remise a 0 du compte d'espace mais
 			espace = espace - T_occ_moy; // on garde le depassement
 		}
 		else train_dimp[i] = 0;
 		espace += 1.f;
 	}
 
-	// convolution avec l'énergir instantannée de la music
+	// convolution avec l'énergie instantannée de la music
 	for (int i = 0; i<length / 1024 - K_TRAIN_DIMP_SIZE; i++)
 	{
 		for (int j = 0; j<K_TRAIN_DIMP_SIZE; j++)
@@ -186,12 +192,12 @@ void BeatDetector::audio_process(void)
 
 	}
 	normalize(conv, length / 1024, 1.f);
-
+	int lasomme = 0;
 	// recherche des peak de la conv
 	// le max (c'est la plupart du temps un beat (pas tout le temps ...))
 	for (int i = 1; i<length / 1024; i++)
 		beat[i] = 0;
-
+	//Recherche du max de la convolution base pour la recherche
 	float max_conv = 0.f;
 	int max_conv_pos = 0;
 	for (int i = 1; i<length / 1024; i++)
@@ -203,26 +209,32 @@ void BeatDetector::audio_process(void)
 		}
 	}
 	beat[max_conv_pos] = 1.f;
+	lasomme++;
 
 	// les suivants
 	// vers la droite
 	int i = max_conv_pos + T_occ_max;
-	while ((i<length / 1024) && (conv[i]>0.f))
+	//while ((i<length / 1024) && (conv[i]>0.f))
+	while (i<length/1024)//test ?
 	{
 		// on cherche un max dans les parages
 		int conv_max_pos_loc = search_max(conv, i, 2);
+		lasomme++;
 		beat[conv_max_pos_loc] = 1.f;
 		i = conv_max_pos_loc + T_occ_max;
 	}
+
 	// vers la gauche
 	i = max_conv_pos - T_occ_max;
 	while (i>0)
 	{
 		// on cherche un max dans les parages
 		int conv_max_pos_loc = search_max(conv, i, 2);
+		lasomme++;
 		beat[conv_max_pos_loc] = 1.f;
 		i = conv_max_pos_loc - T_occ_max;
 	}
+	cout << "nombre de beat detectés dans le beatDetector : " << lasomme << endl;
 }
 
 float* BeatDetector::get_energie1024(void)
@@ -253,4 +265,9 @@ float* BeatDetector::get_beat()
 int BeatDetector::get_tempo(void)
 {
 	return tempo;
+}
+
+float BeatDetector::get_tempo_f(void)
+{
+	return tempo_f;
 }

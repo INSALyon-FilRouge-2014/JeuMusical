@@ -1,14 +1,29 @@
-#include "SoundManager.h"
-#include "Scene.h"
-#include "BeatDetector.h"
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <sstream>
+#include <fstream>
+
+#include "SoundManager.h"
+#include "Scene.h"
+#include "BeatDetector.h"
+#include "LevelGenerator.h"
 
 
 int main(int argc, char *argv[])
 {
-	cout << "coucou" << endl;
+	cout << "coucou : fichier "  << argv[1] << endl;
+	ifstream mamusique(argv[1]);
+	if (mamusique.good())
+	{
+		cout << "Fichier trouve" << endl;
+		mamusique.close();
+	}
+	else
+	{
+		cout << "Fichier introuvable" << endl;
+		return EXIT_FAILURE;
+	}
+
 	// Create main window
 	//sf::RenderWindow App(sf::VideoMode(800, 600), "Beat detector");
 	//sf::Vector2<int> initPos(0, 0);
@@ -25,7 +40,30 @@ int main(int argc, char *argv[])
 	BeatDetector* beatdec = new BeatDetector(snd_mng);
 	beatdec->audio_process(); // launch beats detection
 
-	cout << argv[1] <<" a un bpm de : " <<  beatdec->get_tempo()<< " ! " << endl;
+	LevelGenerator * lvlGen = new LevelGenerator(beatdec, snd_mng, string(argv[1]));
+
+	snd_mng->pause();
+
+	//affichage des beats
+	float* beat = beatdec->get_beat();
+	int currentPos;
+	bool inBeat = false;
+	int beatCounter = 0;
+	while (true)
+	{
+		currentPos = snd_mng->get_current_time_PCM() / 1024.f;
+		if (beat[currentPos] > 0 && inBeat == false)//on entre dans un beat
+		{
+			inBeat = true;
+			cout << "BEAT ! no"<< beatCounter << endl;
+			beatCounter++;
+		}
+		else if (beat[currentPos] < 1 && inBeat == true)
+		{
+			inBeat = false;
+		}
+
+	}
 
 	/*
 	// Create Scene
@@ -93,6 +131,7 @@ int main(int argc, char *argv[])
 		App.display();
 	}
 	*/
-	system("pause");
 	return EXIT_SUCCESS;
 }
+
+
