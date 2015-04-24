@@ -5,7 +5,6 @@
 #include "JumpState.h"
 using namespace sf;
 
-static const int MOVE_SPEED = 13;
 const int SIZE_SPRITE_X = 64;
 const int SIZE_SPRITE_Y = 96;
 const std::string CHARACTER_TEXTURE = "Sprite2.png";
@@ -23,7 +22,6 @@ RunState::RunState()
 	stateSprite->setTexture(*stateTexture);
 
 	stateSprite->setOrigin((float)SIZE_SPRITE_X / 2, (float)SIZE_SPRITE_Y);
-	v_x = MOVE_SPEED;
 	v_y = 0;
 
 }
@@ -40,16 +38,18 @@ void RunState::Init()
 	numberOfSprite = 0;
 	v_y = 0;
 }
+
+/*inutile*/
 CharState* RunState::HandleEvent(Event & event)//traite les evenements
 {
-	CharState* returnState = this;
+	/*CharState* returnState = this;
 	switch (event.key.code)
 	{
 	case Keyboard::Space:
 		returnState = new JumpState();
 		return returnState;
 		break;
-	}
+	}*/
 
 	return this;
 }
@@ -62,7 +62,6 @@ void RunState::Update(Character & hero)//modifie les caracteristiques du personn
 		hero.SetSprite(stateSprite);
 		updateClock.restart();
 	}
-	hero.Move(MOVE_SPEED,0);
 
 }
 

@@ -23,15 +23,6 @@ Map::Map()
 	mapSprite2.setTexture(mapTexture);
 	mapSprite2.setPosition(MAP_SIZE, 0);
 
-	/*if (!solTexture.loadFromFile(SOL_TEXTURE))
-	{
-		// error...
-	}
-	solSprite1.setTexture(solTexture);
-	solSprite1.setPosition(0, 576);
-	solSprite2.setTexture(solTexture);
-	solSprite2.setPosition(MAP_SIZE, 576);
-	*/
 	if (!platTexture.loadFromFile(PLATFORM_TEXTURE))
 	{
 		// error...

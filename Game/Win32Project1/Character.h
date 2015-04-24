@@ -15,7 +15,8 @@ class Character
 
 {
 public:
-	Character(void);
+	Character();
+	Character(unsigned int speed);
 	virtual ~Character(void);
 	void HandleEvent(sf::RenderWindow &);
 	void Update(Map &);
@@ -36,7 +37,7 @@ protected:
 	sf::Clock updateClock2;
 	CharState* actualState;
 	JumpState* jumpState;
-
+	unsigned int v_x;
 	RunState* runState;
 	sf::Vector2f pos;
 };

@@ -16,11 +16,16 @@ const int SIZE_WINDOW_Y = 640;
 const int SIZE_WINDOW_X = 1024;
 static const int V_Y = -25;
 
+Character::Character()
+{
 
-Character::Character(void)
+}
+
+Character::Character(unsigned int speed)
 {
 	runState = new RunState();
 	actualState = runState;
+	sleep(milliseconds(50));
 	jumpState = new JumpState();
 	actualState->Update(*this);
 	actualSprite->setOrigin((float)SIZE_SPRITE_X/2,(float)SIZE_SPRITE_Y);
@@ -28,7 +33,7 @@ Character::Character(void)
 	updateClock.restart();
 	pos.x = SIZE_WINDOW_X / 2;
 	pos.y = SIZE_WINDOW_Y - 128;
-
+	v_x = speed;
 
 }
 
@@ -45,7 +50,10 @@ void Character::HandleEvent(RenderWindow &window)
         window.close();
         break;
 	case Event::KeyPressed:
-		this->SetJumpState(V_Y);
+		if (event.key.code == sf::Keyboard::Space)
+		{
+			this->SetJumpState(V_Y);
+		}
 		break;
 	}
 	}
@@ -57,12 +65,13 @@ void Character::Update(Map & level)
 {
 
 
-	// mise a jour de la texture du sprite toutes les 0.05s
+	// mise a jour de la texture du sprite toutes les 20ms
 
 
 	if(updateClock.getElapsedTime()>=Time(milliseconds(20)))
 	{
 		actualState->Update(*this);
+		pos.x += v_x;
 		actualSprite->setPosition(pos.x, pos.y);
 		updateClock.restart();
 	}

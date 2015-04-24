@@ -3,7 +3,6 @@
 #include <SFML\Graphics.hpp>
 
 static const int GRAV = 3;
-static const int MOVE_SPEED = 13;
 static const int V_Y = -40;
 const int SIZE_SPRITE_X = 64;
 const int SIZE_SPRITE_Y = 96;
@@ -25,7 +24,6 @@ JumpState::JumpState()
 	stateSprite->setTexture(*stateTexture);
 	stateSprite->setOrigin((float)SIZE_SPRITE_X / 2, (float)SIZE_SPRITE_Y);
 	v_y = 0;
-	v_x = MOVE_SPEED;
 }
 
 void JumpState::Init(int v_init)
@@ -40,19 +38,20 @@ JumpState::~JumpState()
 	delete stateSprite;
 }
 
+/*inutile*/
 CharState* JumpState::HandleEvent(sf::Event & event)
 {
 
-
+	/*
 	CharState* returnState = this;
 	switch (event.key.code)
 	{
 	case Keyboard::Space:
-		returnState = new JumpState();
+		//returnState = new JumpState();
 		return returnState;
 		break;
 	}
-
+	*/
 	return this;
 }
 
@@ -60,11 +59,8 @@ void JumpState::Update(Character & hero)
 {
 
 	v_y += GRAV;
-	/*stateSprite->setTextureRect(IntRect((numberOfSprite % 5)*SIZE_SPRITE_X, ((int)numberOfSprite / 5)*SIZE_SPRITE_Y, SIZE_SPRITE_X, SIZE_SPRITE_Y));
-	numberOfSprite = (numberOfSprite + 1) % 10;
-	updateClock.restart();*/
 	hero.SetSprite(stateSprite);
-	hero.Move(v_x, v_y);
+	hero.Move(0, v_y);
 	
 	
 }

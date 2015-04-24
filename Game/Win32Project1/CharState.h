@@ -10,7 +10,6 @@ class CharState
 {
 protected:
 
-	int v_x;
 	int v_y;
 	sf::Texture *stateTexture;
 	sf::Sprite *stateSprite;
