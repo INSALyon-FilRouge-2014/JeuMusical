@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="headers\Character.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\CharState.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\GlideState.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\JumpState.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\RunState.h">
+      <Filter>Character</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\GameState.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\InGame.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\XMLWriter.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\XMLReader.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\tinyxml.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\tinystr.h">
+      <Filter>XML</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\Platform.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\Map.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\Obstacle.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\stdafx.h" />
+    <ClInclude Include="headers\targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="LeMeilleurJeuDuMonde.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Character">
+      <UniqueIdentifier>{8b025d40-7217-4ee6-a51c-5700ea99326d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Level">
+      <UniqueIdentifier>{252fec5a-cf37-4ff0-89e7-556a044ccf2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XML">
+      <UniqueIdentifier>{65f8b945-d91c-4ca0-988a-1ce83c59dfdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{44c10fdb-de49-45f0-b227-e662786eef83}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Character.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CharState.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JumpState.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RunState.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameState.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\InGame.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Source.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Map.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tinystr.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tinyxml.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tinyxmlerror.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tinyxmlparser.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XMLReader.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="src\XMLWriter.cpp">
+      <Filter>XML</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stdafx.cpp" />
+    <ClCompile Include="src\GlideState.cpp">
+      <Filter>Character</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

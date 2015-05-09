@@ -54,7 +54,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>D:\programmation\SFML-2.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\FilRouge\Game\Win32Project1\headers;D:\programmation\SFML-2.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -82,31 +82,44 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Character.cpp" />
-    <ClCompile Include="CharState.cpp" />
-    <ClCompile Include="GameState.cpp" />
-    <ClCompile Include="GlideState.cpp" />
-    <ClCompile Include="InGame.cpp" />
-    <ClCompile Include="JumpState.cpp" />
-    <ClCompile Include="Map.cpp" />
-    <ClCompile Include="Platform.cpp" />
-    <ClCompile Include="RunState.cpp" />
-    <ClCompile Include="Source.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Character.h" />
-    <ClInclude Include="CharState.h" />
-    <ClInclude Include="GameState.h" />
-    <ClInclude Include="GlideState.h" />
-    <ClInclude Include="InGame.h" />
-    <ClInclude Include="JumpState.h" />
-    <ClInclude Include="Map.h" />
-    <ClInclude Include="Platform.h" />
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="RunState.h" />
+    <ClInclude Include="headers\Character.h" />
+    <ClInclude Include="headers\CharState.h" />
+    <ClInclude Include="headers\GameState.h" />
+    <ClInclude Include="headers\GlideState.h" />
+    <ClInclude Include="headers\InGame.h" />
+    <ClInclude Include="headers\JumpState.h" />
+    <ClInclude Include="headers\Map.h" />
+    <ClInclude Include="headers\Obstacle.h" />
+    <ClInclude Include="headers\Platform.h" />
+    <ClInclude Include="headers\RunState.h" />
+    <ClInclude Include="headers\stdafx.h" />
+    <ClInclude Include="headers\targetver.h" />
+    <ClInclude Include="headers\tinystr.h" />
+    <ClInclude Include="headers\tinyxml.h" />
+    <ClInclude Include="headers\XMLReader.h" />
+    <ClInclude Include="headers\XMLWriter.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LeMeilleurJeuDuMonde.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Character.cpp" />
+    <ClCompile Include="src\CharState.cpp" />
+    <ClCompile Include="src\GameState.cpp" />
+    <ClCompile Include="src\GlideState.cpp" />
+    <ClCompile Include="src\InGame.cpp" />
+    <ClCompile Include="src\JumpState.cpp" />
+    <ClCompile Include="src\Map.cpp" />
+    <ClCompile Include="src\Platform.cpp" />
+    <ClCompile Include="src\RunState.cpp" />
+    <ClCompile Include="src\Source.cpp" />
+    <ClCompile Include="src\stdafx.cpp" />
+    <ClCompile Include="src\tinystr.cpp" />
+    <ClCompile Include="src\tinyxml.cpp" />
+    <ClCompile Include="src\tinyxmlerror.cpp" />
+    <ClCompile Include="src\tinyxmlparser.cpp" />
+    <ClCompile Include="src\XMLReader.cpp" />
+    <ClCompile Include="src\XMLWriter.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
