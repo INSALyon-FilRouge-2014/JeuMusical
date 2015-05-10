@@ -7,6 +7,7 @@ using namespace std;
 
 const std::string MAP_TEXTURE = "fond.png";
 const std::string PLATFORM_TEXTURE1 = "box2.png";
+const std::string PLATFORM_TEXTURE2 = "cloud.png";
 const std::string SOL_TEXTURE = "Sol.png";
 const int MAP_SIZE = 6000;
 const int SIZE_WINDOW_Y = 640;
@@ -22,8 +23,13 @@ Map::Map()
 	mapSprite1.setPosition(0, 0);
 	mapSprite2.setTexture(mapTexture);
 	mapSprite2.setPosition(MAP_SIZE, 0);
+	platTexture = new Texture[2];
+	if (!platTexture[0].loadFromFile(PLATFORM_TEXTURE1))
+	{
+		// error...
+	}
 
-	if (!platTexture.loadFromFile(PLATFORM_TEXTURE1))
+	if (!platTexture[1].loadFromFile(PLATFORM_TEXTURE2))
 	{
 		// error...
 	}
@@ -32,7 +38,7 @@ Map::Map()
 	platformtab = reader->read();
 	for (unsigned int i = 0; i < platformtab->size(); i++)
 	{
-		platformtab->at(i).SetTexture(&platTexture);
+		platformtab->at(i).SetTexture(&platTexture[(platformtab->at(i)).GetType()]);
 	}
 	delete reader;
 }

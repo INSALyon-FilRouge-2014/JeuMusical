@@ -2,6 +2,7 @@
 #define CHARACTER_H
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include <vector>
 #include "CharState.h"
 #include "JumpState.h"
@@ -40,6 +41,11 @@ protected:
 	unsigned int v_x;
 	RunState* runState;
 	sf::Vector2f pos;
+
+
+	/*gestion des sons*/
+	sf::SoundBuffer buffer;
+	sf::Sound jump;
 };
 
 

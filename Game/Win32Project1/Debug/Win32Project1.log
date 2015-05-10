@@ -1,8 +1,32 @@
-﻿La génération a démarré 10/05/2015 17:11:33.
-     1>Projet "D:\FilRouge\Game\Win32Project1\Win32Project1.vcxproj" sur le nœud 2 (Build cible(s)).
+﻿La génération a démarré 10/05/2015 17:59:30.
+     1>Projet "D:\FilRouge\Game\Win32Project1\Win32Project1.vcxproj" sur le nœud 2 (Rebuild cible(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ID:\FilRouge\Game\Win32Project1\headers /I"D:\programmation\SFML-2.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt src\Character.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ID:\FilRouge\Game\Win32Project1\headers /I"D:\programmation\SFML-2.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt src\Character.cpp src\CharState.cpp src\GameState.cpp src\GlideState.cpp src\InGame.cpp src\JumpState.cpp src\Map.cpp src\Platform.cpp src\RunState.cpp src\Source.cpp src\stdafx.cpp src\tinystr.cpp src\tinyxml.cpp src\tinyxmlerror.cpp src\tinyxmlparser.cpp src\XMLReader.cpp src\XMLWriter.cpp
+         XMLWriter.cpp
+         XMLReader.cpp
+     1>d:\filrouge\game\win32project1\src\xmlreader.cpp(38): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+         tinyxmlparser.cpp
+         tinyxmlerror.cpp
+         tinyxml.cpp
+         tinystr.cpp
+         stdafx.cpp
+         Source.cpp
+         RunState.cpp
+         Platform.cpp
+         Map.cpp
+     1>d:\filrouge\game\win32project1\src\map.cpp(25): warning C4244: 'argument' : conversion de 'const int' en 'float', perte possible de données
+     1>d:\filrouge\game\win32project1\src\map.cpp(82): warning C4018: '<' : incompatibilité signed/unsigned
+     1>d:\filrouge\game\win32project1\src\map.cpp(97): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+         JumpState.cpp
+         InGame.cpp
+         GlideState.cpp
+         GameState.cpp
+         CharState.cpp
          Character.cpp
+         Génération de code en cours...
+     1>d:\filrouge\game\win32project1\src\xmlreader.cpp(47): warning C4715: 'XMLReader::read' : les chemins de contrôle ne retournent pas tous une valeur
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"Debug\LeMeilleurJeuDuMonde.res" LeMeilleurJeuDuMonde.rc 
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\FilRouge\Game\Debug\LeMeilleurJeuDuMonde.exe" /INCREMENTAL /NOLOGO /LIBPATH:"D:\programmation\SFML-2.2\lib" "sfml-main-d.lib" "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-audio-d.lib" "sfml-network-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\FilRouge\Game\Debug\LeMeilleurJeuDuMonde.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\FilRouge\Game\Debug\LeMeilleurJeuDuMonde.lib" /MACHINE:X86 Debug\LeMeilleurJeuDuMonde.res
          Debug\Character.obj
@@ -23,8 +47,8 @@
          Debug\XMLReader.obj
          Debug\XMLWriter.obj
          Win32Project1.vcxproj -> D:\FilRouge\Game\Debug\LeMeilleurJeuDuMonde.exe
-     1>Génération du projet "D:\FilRouge\Game\Win32Project1\Win32Project1.vcxproj" terminée (Build cible(s)).
+     1>Génération du projet "D:\FilRouge\Game\Win32Project1\Win32Project1.vcxproj" terminée (Rebuild cible(s)).
 
 La génération a réussi.
 
-Temps écoulé 00:00:00.74
+Temps écoulé 00:00:06.99

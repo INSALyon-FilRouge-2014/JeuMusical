@@ -19,7 +19,7 @@ protected:
 	sf::Sprite mapSprite2;
 	sf::Texture mapTexture;
 
-	sf::Texture platTexture;
+	sf::Texture* platTexture;
 	std::vector<Platform>* platformtab;
 
 

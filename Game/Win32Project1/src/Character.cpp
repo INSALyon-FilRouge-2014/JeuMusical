@@ -28,13 +28,18 @@ Character::Character(unsigned int speed)
 	sleep(milliseconds(50));
 	jumpState = new JumpState();
 	actualState->Update(*this);
-	actualSprite->setOrigin((float)SIZE_SPRITE_X/2,(float)SIZE_SPRITE_Y);
-	//actualSprite->setPosition((float)SIZE_SPRITE_X/2,(float)SIZE_WINDOW_Y);
+	actualSprite->setOrigin((float)SIZE_SPRITE_X / 2, (float)SIZE_SPRITE_Y);
 	updateClock.restart();
 	pos.x = 0;
 	pos.y = SIZE_WINDOW_Y - 128;
 	v_x = speed;
 
+	if (!buffer.loadFromFile("Bounce.wav"))
+	{
+		//erreur
+	}
+	jump.setBuffer(buffer);
+	jump.setVolume(50.f);
 }
 
 /* A REFAIRE*/
@@ -52,6 +57,8 @@ void Character::HandleEvent(RenderWindow &window)
 	case Event::KeyPressed:
 		if (event.key.code == sf::Keyboard::Space)
 		{
+
+			jump.play();
 			this->SetJumpState(V_Y);
 		}
 		break;
@@ -137,6 +144,7 @@ void Character::SetJumpState(int v_init)
 		cout << "setjump "<< v_init << endl;
 		jumpState->Init(v_init);
 		actualState = jumpState;
+		
 	}
 
 }
