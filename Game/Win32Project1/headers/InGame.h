@@ -16,6 +16,8 @@ protected:
 	Character* personnage;
 	Map level;
 	sf::Text dist;
+	sf::Clock clock;
+	sf::Text time;
 	sf::Font font;
 };
 

@@ -6,8 +6,11 @@
 class Platform
 {
 public:
-	Platform(sf::Texture*, float,float);
+	enum TypeObstacle { CAISSE, NUAGE, PIC };
+	Platform(sf::Texture*, float,float, TypeObstacle);
+	Platform(float, float, TypeObstacle);
 	virtual ~Platform();
+	void SetTexture(sf::Texture* texture);
 	sf::Vector2f GetPos(){ return pos; };
 	sf::FloatRect GetHitBox(){ return sprite.getGlobalBounds(); };
 	void Draw(sf::RenderWindow & window);
@@ -16,7 +19,7 @@ protected:
 	sf::Sprite sprite;
 	sf::Vector2f pos;
 	sf::FloatRect hitbox;
-
+	TypeObstacle type;
 };
 
 #endif

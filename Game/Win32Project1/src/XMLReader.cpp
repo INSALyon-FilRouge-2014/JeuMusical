@@ -10,9 +10,9 @@ XMLReader::XMLReader(char* chemin)
 	doc = doc2;
 }
 
-vector<Obstacle>* XMLReader::read()
+vector<Platform>* XMLReader::read()
 {
-	vector<Obstacle>* obstacles = new vector<Obstacle>;
+	vector<Platform>* Platforms = new vector<Platform>;
 	if (doc.LoadFile())
 	{
 		TiXmlHandle hdl(&doc);
@@ -30,15 +30,15 @@ vector<Obstacle>* XMLReader::read()
 
 			int hauteur = atoi(elem->Attribute("hauteur"));
 			cout << "hauteur : " << hauteur << endl;
-
-			Obstacle::TypeObstacle type = (Obstacle::TypeObstacle) atoi(elem->Attribute("type"));
+			
+			Platform::TypeObstacle type = (Platform::TypeObstacle) atoi(elem->Attribute("type"));
 			cout << "type : " << type << endl;
 
 			// On le rajoute a la liste
-			Obstacle ob(pos, hauteur, type);
-			obstacles->push_back(ob);
+			Platform ob(pos, hauteur, type);
+			Platforms->push_back(ob);
 		}
-		return obstacles;
+		return Platforms;
 	}
 	else
 	{

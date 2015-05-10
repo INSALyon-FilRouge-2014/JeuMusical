@@ -2,6 +2,7 @@
 #define MAP_H
 
 #include <SFML/Graphics.hpp>
+#include <vector>
 #include "Platform.h"
 #include "Character.h"
 
@@ -19,7 +20,7 @@ protected:
 	sf::Texture mapTexture;
 
 	sf::Texture platTexture;
-	Platform** platformtab;
+	std::vector<Platform>* platformtab;
 
 
 };

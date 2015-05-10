@@ -31,7 +31,7 @@ Character::Character(unsigned int speed)
 	actualSprite->setOrigin((float)SIZE_SPRITE_X/2,(float)SIZE_SPRITE_Y);
 	//actualSprite->setPosition((float)SIZE_SPRITE_X/2,(float)SIZE_WINDOW_Y);
 	updateClock.restart();
-	pos.x = SIZE_WINDOW_X / 2;
+	pos.x = 0;
 	pos.y = SIZE_WINDOW_Y - 128;
 	v_x = speed;
 
@@ -107,8 +107,8 @@ void Character::Move(int x, int y)
 
 void Character::Replace()
 {
-	pos.x = 1024/2;
-	pos.y = 500;
+	pos.x = 0;
+	pos.y = SIZE_WINDOW_Y - 128;
 
 }
 

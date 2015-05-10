@@ -20,9 +20,17 @@ InGame::InGame(unsigned int charSpeed)
 	}
 	dist.setString("0");
 	dist.setFont(font);
-	dist.setCharacterSize(50);
+	dist.setCharacterSize(30);
 	dist.setColor(sf::Color::Black);
-	dist.setPosition(50, 580);
+	dist.setPosition(50, 600);
+
+
+	time.setString("0");
+	time.setFont(font);
+	time.setCharacterSize(30);
+	time.setColor(sf::Color::Black);
+	time.setPosition(50, 590);
+	clock.restart();
 }
 
 void InGame::Update(sf::RenderWindow & window)
@@ -37,20 +45,27 @@ void InGame::Update(sf::RenderWindow & window)
 	if (level.Collision(*personnage))
 	{
 		cout << "perdu" << endl;
-		personnage->Replace();
+		Restart();
 	}
 
 	//Affichage du score
 	std::ostringstream ss;
 	ss << personnage->GetPos().x;
-	dist.setString(ss.str());
-	dist.setPosition(personnage->GetPos().x - 100, 580);
+	dist.setString("dist: " + ss.str());
+	dist.setPosition(personnage->GetPos().x - 150, 590);
 	window.draw(dist);
+
+	std::ostringstream s;
+	s << (int)clock.getElapsedTime().asSeconds();
+	time.setString("time: " + s.str());
+	time.setPosition(personnage->GetPos().x - 150, 560);
+	window.draw(time);
 }
 
 void InGame::Restart()
 {
-
+	clock.restart();
+	personnage->Replace();
 }
 
 InGame::~InGame()

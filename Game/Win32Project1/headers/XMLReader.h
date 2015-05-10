@@ -5,7 +5,7 @@
 #include <string>
 #include <list>
 #include <vector>
-#include "Obstacle.h"
+#include "Platform.h"
 #include "tinyxml.h"
 
 class XMLReader
@@ -14,7 +14,7 @@ public:
 	XMLReader(char* str);
 	~XMLReader();
 	//Lis toutes les balises de type "bloc" et place les objets ainsi créés dans un tableau
-	std::vector<Obstacle>* read();
+	std::vector<Platform>* read();
 protected:
 	TiXmlDocument doc;
 };
