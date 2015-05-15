@@ -12,7 +12,7 @@ XMLWriter::XMLWriter(string filename, string nom, int longueur, int bpm, float v
 
 bool XMLWriter::writeObstacle(Obstacle obs)
 {
-	os << "<bloc position=\"" << obs.getPosition() << "\" hauteur=\"" << obs.getHauteur() << "\" type=\"" << obs.getType() << "\" positionPCM=\"" << obs.getPCMPosition() << "\" positionPCM1024=\"" << obs.getPCM1024Position() << "\" />" << endl;
+	os << "<bloc position=\"" << obs.getPosition() << "\" hauteur=\"" << obs.getHauteur() << "\" type=\"" << obs.getType() << "\" positionPCM=\"" << obs.getPCMPosition() << "\" positionPCM1024=\"" << obs.getPCM1024Position() << "\" positionMS=\"" << obs.getMSPosition() << "\" />" << endl;
 	return true;
 }
 

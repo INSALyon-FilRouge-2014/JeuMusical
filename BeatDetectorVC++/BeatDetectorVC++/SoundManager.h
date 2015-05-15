@@ -18,6 +18,8 @@ public:
 	unsigned int get_length();
 	unsigned int get_length_MS();
 	int get_current_time_PCM(); // renvoi le temps en nombre de samples
+	int get_current_time_MS();
+	int getMSFromPCM(int pcm1024);	//transforme un PCM 1024 en sa valeur en ms dans la musique
 	void set_current_time(int PCM);
 	void change_pitch(float val); // change la vitesse de lecture
 	float get_pitch();
