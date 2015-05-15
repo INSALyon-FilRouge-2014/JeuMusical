@@ -13,6 +13,7 @@ public:
 	virtual ~Map();
 	void Draw(sf::RenderWindow &window);
 	bool Collision(Character&);
+	void Reset();
 
 protected:
 	sf::Sprite mapSprite1;

@@ -13,7 +13,7 @@ public:
 	void SetTexture(sf::Texture* texture);
 	sf::Vector2f GetPos(){ return pos; };
 	sf::FloatRect GetHitBox(){ return sprite.getGlobalBounds(); };
-	unsigned int GetType(){ return type; };
+	int GetType(){ return type; };
 	void Draw(sf::RenderWindow & window);
 
 protected:

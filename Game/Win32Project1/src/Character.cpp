@@ -21,7 +21,7 @@ Character::Character()
 
 }
 
-Character::Character(unsigned int speed)
+Character::Character(float speed)
 {
 	runState = new RunState();
 	actualState = runState;
@@ -33,7 +33,7 @@ Character::Character(unsigned int speed)
 	pos.x = 0;
 	pos.y = SIZE_WINDOW_Y - 128;
 	v_x = speed;
-
+	cout << speed << endl;
 	if (!buffer.loadFromFile("Bounce.wav"))
 	{
 		//erreur
@@ -43,17 +43,11 @@ Character::Character(unsigned int speed)
 }
 
 /* A REFAIRE*/
-void Character::HandleEvent(RenderWindow &window)
+void Character::HandleEvent(Event & event)
 {
-	Event event;
 	CharState * oldState = actualState;
-	while(window.pollEvent(event))
-	{
 	switch(event.type)
 	{
-	case Event::Closed:
-        window.close();
-        break;
 	case Event::KeyPressed:
 		if (event.key.code == sf::Keyboard::Space)
 		{
@@ -63,22 +57,22 @@ void Character::HandleEvent(RenderWindow &window)
 		}
 		break;
 	}
-	}
-	
 }
+	
 
 
 void Character::Update(Map & level)
 {
 
 
-	// mise a jour de la texture du sprite toutes les 20ms
+	// mise a jour de la texture du sprite toutes les 30ms
 
 
 	if(updateClock.getElapsedTime()>=Time(milliseconds(20)))
 	{
 		actualState->Update(*this);
 		pos.x += v_x;
+		//cout << "deplacement: " << v_x << endl;
 		actualSprite->setPosition(pos.x, pos.y);
 		updateClock.restart();
 	}
@@ -99,11 +93,15 @@ void Character::Draw(RenderWindow & window)
 	sf::View currentView = window.getView();
 	currentView.setCenter(pos.x + POS_VIEW,SIZE_WINDOW_Y/2);
 	window.setView(currentView);
+	if (actualSprite->getPosition().y > (float)SIZE_WINDOW_Y - 128)
+	{
+		actualSprite->setPosition(pos.x,(float)SIZE_WINDOW_Y - 128);
+		
+	}
 	window.draw(*actualSprite);
-
 }
 
-void Character::Move(int x, int y)
+void Character::Move(float x, int y)
 {
 
 	pos.x += x;

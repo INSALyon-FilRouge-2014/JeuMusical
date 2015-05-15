@@ -5,7 +5,8 @@
 #include <string>
 #include <SFML/Graphics.hpp>
 using namespace std;
-InGame::InGame(unsigned int charSpeed)
+using namespace sf;
+InGame::InGame(float charSpeed)
 {
 	personnage = new Character(charSpeed);
 	dist.setString("0");
@@ -36,7 +37,7 @@ InGame::InGame(unsigned int charSpeed)
 void InGame::Update(sf::RenderWindow & window)
 {
 	window.clear();
-	personnage->HandleEvent(window);
+	HandleEvent(window);
 
 	personnage->Update(level);
 
@@ -46,6 +47,7 @@ void InGame::Update(sf::RenderWindow & window)
 	{
 		cout << "perdu" << endl;
 		Restart();
+
 	}
 
 	//Affichage du score
@@ -57,6 +59,10 @@ void InGame::Update(sf::RenderWindow & window)
 
 	std::ostringstream s;
 	s << (int)clock.getElapsedTime().asSeconds();
+	if ((int)clock.getElapsedTime().asSeconds() == 10)
+	{
+		cout << personnage->GetPos().x << endl;
+	}
 	time.setString("time: " + s.str());
 	time.setPosition(personnage->GetPos().x - 150, 560);
 	window.draw(time);
@@ -66,6 +72,33 @@ void InGame::Restart()
 {
 	clock.restart();
 	personnage->Replace();
+	level.Reset();
+}
+
+
+void InGame::HandleEvent(sf::RenderWindow &window)
+{
+	Event event;
+	while (window.pollEvent(event))
+	{
+		switch (event.type)
+		{
+		case Event::Closed:
+			window.close();
+			break;
+		case Event::KeyPressed:
+			if (event.key.code == sf::Keyboard::Space)
+			{
+				personnage->HandleEvent(event);
+			}
+			else if (event.key.code == sf::Keyboard::R)
+			{
+				Restart();
+			}
+			break;
+		}
+	}
+
 }
 
 InGame::~InGame()

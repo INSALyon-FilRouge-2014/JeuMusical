@@ -34,7 +34,7 @@ Map::Map()
 		// error...
 	}
 
-	XMLReader* reader = new XMLReader("Level2.xml");
+	XMLReader* reader = new XMLReader("face to face.xml");
 	platformtab = reader->read();
 	for (unsigned int i = 0; i < platformtab->size(); i++)
 	{
@@ -79,7 +79,8 @@ bool Map::Collision(Character& hero)
 {
 	int poshero =(int) hero.GetPos().x;
 	FloatRect herobox = hero.GetHitbox();
-	for (int i =(int) poshero/64; i <(int) poshero/64 +5; i++)
+	//boucle de collision a modifier
+	for (int i =0/*(int) poshero/64*/; i <platformtab->size()/*(int) poshero/64 +5*/; i++)
 	{
 		if (i < platformtab->size() && herobox.intersects(platformtab->at(i).GetHitBox()))
 		{
@@ -110,4 +111,11 @@ bool Map::Collision(Character& hero)
 	return false;
 
 
+}
+
+
+void Map::Reset()
+{
+	mapSprite1.setPosition(0, 0);
+	mapSprite2.setPosition(MAP_SIZE, 0);
 }

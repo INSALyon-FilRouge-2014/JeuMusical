@@ -9,14 +9,11 @@ int main()
 	cout << "bonjour" << endl;
 	sf::RenderWindow window(sf::VideoMode(1024, 640), "Le jeu !");
 
-	window.setFramerateLimit(60);
+	window.setFramerateLimit(120);
 	View vue(FloatRect(0,320,1024,640));
 	vue.setCenter(512, 320);
 	window.setView(vue);
-	InGame gameState(13);
-	int i = 0;
-
-
+	InGame gameState(10);
 	while (window.isOpen())
     {
 		window.clear();

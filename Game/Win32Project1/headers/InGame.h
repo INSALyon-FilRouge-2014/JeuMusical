@@ -7,9 +7,10 @@ class InGame :
 	public GameState
 {
 public:
-	InGame(unsigned int charSpeed);
+	InGame(float charSpeed);
 	void Update(sf::RenderWindow &);
 	void Restart();
+	void HandleEvent(sf::RenderWindow &window);
 	virtual ~InGame();
 
 protected:

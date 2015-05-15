@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "XMLReader.h"
 
+#include <iostream>
 
 using namespace std;
 

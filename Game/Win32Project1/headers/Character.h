@@ -17,12 +17,12 @@ class Character
 {
 public:
 	Character();
-	Character(unsigned int speed);
+	Character(float speed);
 	virtual ~Character(void);
-	void HandleEvent(sf::RenderWindow &);
+	void HandleEvent(sf::Event &);
 	void Update(Map &);
 	void Draw(sf::RenderWindow &);
-	void Move(int, int);
+	void Move(float, int);
 	void Replace();
 	void SetSprite(sf::Sprite*);
 	void SetRunState();
@@ -38,7 +38,7 @@ protected:
 	sf::Clock updateClock2;
 	CharState* actualState;
 	JumpState* jumpState;
-	unsigned int v_x;
+	float v_x;
 	RunState* runState;
 	sf::Vector2f pos;
 
