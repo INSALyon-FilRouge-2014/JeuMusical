@@ -1,116 +1,116 @@
 <niveau nom="face to face" longueur="947" bpm="118" vitesse="3.94036"/>
-<bloc position="32" hauteur="8" type="0" positionPCM="354" positionPCM1024="0" />
-<bloc position="40" hauteur="8" type="0" positionPCM="442" positionPCM1024="0" />
-<bloc position="48" hauteur="8" type="0" positionPCM="530" positionPCM1024="0" />
-<bloc position="56" hauteur="8" type="0" positionPCM="617" positionPCM1024="0" />
-<bloc position="64" hauteur="8" type="0" positionPCM="705" positionPCM1024="0" />
-<bloc position="72" hauteur="8" type="0" positionPCM="793" positionPCM1024="0" />
-<bloc position="80" hauteur="8" type="0" positionPCM="880" positionPCM1024="0" />
-<bloc position="88" hauteur="8" type="0" positionPCM="968" positionPCM1024="0" />
-<bloc position="96" hauteur="8" type="0" positionPCM="1056" positionPCM1024="1" />
-<bloc position="104" hauteur="8" type="0" positionPCM="1144" positionPCM1024="1" />
-<bloc position="112" hauteur="8" type="0" positionPCM="1231" positionPCM1024="1" />
-<bloc position="120" hauteur="8" type="0" positionPCM="1319" positionPCM1024="1" />
-<bloc position="128" hauteur="8" type="0" positionPCM="1406" positionPCM1024="1" />
-<bloc position="136" hauteur="8" type="0" positionPCM="1494" positionPCM1024="1" />
-<bloc position="144" hauteur="8" type="0" positionPCM="1582" positionPCM1024="1" />
-<bloc position="152" hauteur="8" type="0" positionPCM="1669" positionPCM1024="1" />
-<bloc position="160" hauteur="8" type="0" positionPCM="1757" positionPCM1024="1" />
-<bloc position="168" hauteur="8" type="0" positionPCM="1845" positionPCM1024="1" />
-<bloc position="176" hauteur="8" type="0" positionPCM="1933" positionPCM1024="1" />
-<bloc position="184" hauteur="8" type="0" positionPCM="2020" positionPCM1024="1" />
-<bloc position="192" hauteur="8" type="0" positionPCM="2108" positionPCM1024="2" />
-<bloc position="200" hauteur="8" type="0" positionPCM="2195" positionPCM1024="2" />
-<bloc position="208" hauteur="8" type="0" positionPCM="2283" positionPCM1024="2" />
-<bloc position="216" hauteur="8" type="0" positionPCM="2371" positionPCM1024="2" />
-<bloc position="224" hauteur="8" type="0" positionPCM="2459" positionPCM1024="2" />
-<bloc position="232" hauteur="8" type="0" positionPCM="2546" positionPCM1024="2" />
-<bloc position="240" hauteur="8" type="0" positionPCM="2634" positionPCM1024="2" />
-<bloc position="248" hauteur="8" type="0" positionPCM="2722" positionPCM1024="2" />
-<bloc position="256" hauteur="8" type="0" positionPCM="2809" positionPCM1024="2" />
-<bloc position="264" hauteur="8" type="0" positionPCM="2897" positionPCM1024="2" />
-<bloc position="272" hauteur="8" type="0" positionPCM="2985" positionPCM1024="2" />
-<bloc position="280" hauteur="8" type="0" positionPCM="3072" positionPCM1024="3" />
-<bloc position="288" hauteur="8" type="0" positionPCM="3160" positionPCM1024="3" />
-<bloc position="296" hauteur="8" type="0" positionPCM="3248" positionPCM1024="3" />
-<bloc position="304" hauteur="8" type="0" positionPCM="3336" positionPCM1024="3" />
-<bloc position="312" hauteur="8" type="0" positionPCM="3423" positionPCM1024="3" />
-<bloc position="320" hauteur="8" type="0" positionPCM="3511" positionPCM1024="3" />
-<bloc position="328" hauteur="8" type="0" positionPCM="3599" positionPCM1024="3" />
-<bloc position="336" hauteur="8" type="0" positionPCM="3686" positionPCM1024="3" />
-<bloc position="344" hauteur="8" type="0" positionPCM="3774" positionPCM1024="3" />
-<bloc position="352" hauteur="8" type="0" positionPCM="3861" positionPCM1024="3" />
-<bloc position="360" hauteur="8" type="0" positionPCM="3949" positionPCM1024="3" />
-<bloc position="368" hauteur="8" type="0" positionPCM="4037" positionPCM1024="3" />
-<bloc position="376" hauteur="8" type="0" positionPCM="4125" positionPCM1024="4" />
-<bloc position="384" hauteur="8" type="0" positionPCM="4212" positionPCM1024="4" />
-<bloc position="392" hauteur="8" type="0" positionPCM="4300" positionPCM1024="4" />
-<bloc position="400" hauteur="8" type="0" positionPCM="4388" positionPCM1024="4" />
-<bloc position="408" hauteur="8" type="0" positionPCM="4475" positionPCM1024="4" />
-<bloc position="416" hauteur="8" type="0" positionPCM="4563" positionPCM1024="4" />
-<bloc position="424" hauteur="8" type="0" positionPCM="4651" positionPCM1024="4" />
-<bloc position="432" hauteur="8" type="0" positionPCM="4738" positionPCM1024="4" />
-<bloc position="440" hauteur="8" type="0" positionPCM="4826" positionPCM1024="4" />
-<bloc position="448" hauteur="8" type="0" positionPCM="4914" positionPCM1024="4" />
-<bloc position="456" hauteur="8" type="0" positionPCM="5001" positionPCM1024="4" />
-<bloc position="464" hauteur="8" type="0" positionPCM="5089" positionPCM1024="4" />
-<bloc position="472" hauteur="8" type="0" positionPCM="5177" positionPCM1024="5" />
-<bloc position="480" hauteur="8" type="0" positionPCM="5264" positionPCM1024="5" />
-<bloc position="488" hauteur="8" type="0" positionPCM="5352" positionPCM1024="5" />
-<bloc position="496" hauteur="8" type="0" positionPCM="5440" positionPCM1024="5" />
-<bloc position="504" hauteur="8" type="0" positionPCM="5527" positionPCM1024="5" />
-<bloc position="512" hauteur="8" type="0" positionPCM="5615" positionPCM1024="5" />
-<bloc position="520" hauteur="8" type="0" positionPCM="5703" positionPCM1024="5" />
-<bloc position="528" hauteur="8" type="0" positionPCM="5791" positionPCM1024="5" />
-<bloc position="536" hauteur="8" type="0" positionPCM="5878" positionPCM1024="5" />
-<bloc position="544" hauteur="8" type="0" positionPCM="5966" positionPCM1024="5" />
-<bloc position="552" hauteur="8" type="0" positionPCM="6054" positionPCM1024="5" />
-<bloc position="560" hauteur="8" type="0" positionPCM="6141" positionPCM1024="5" />
-<bloc position="568" hauteur="8" type="0" positionPCM="6229" positionPCM1024="6" />
-<bloc position="576" hauteur="8" type="0" positionPCM="6317" positionPCM1024="6" />
-<bloc position="584" hauteur="8" type="0" positionPCM="6404" positionPCM1024="6" />
-<bloc position="592" hauteur="8" type="0" positionPCM="6492" positionPCM1024="6" />
-<bloc position="600" hauteur="8" type="0" positionPCM="6580" positionPCM1024="6" />
-<bloc position="608" hauteur="8" type="0" positionPCM="6667" positionPCM1024="6" />
-<bloc position="616" hauteur="8" type="0" positionPCM="6755" positionPCM1024="6" />
-<bloc position="624" hauteur="8" type="0" positionPCM="6843" positionPCM1024="6" />
-<bloc position="632" hauteur="8" type="0" positionPCM="6930" positionPCM1024="6" />
-<bloc position="640" hauteur="8" type="0" positionPCM="7018" positionPCM1024="6" />
-<bloc position="648" hauteur="8" type="0" positionPCM="7106" positionPCM1024="6" />
-<bloc position="656" hauteur="8" type="0" positionPCM="7193" positionPCM1024="7" />
-<bloc position="664" hauteur="8" type="0" positionPCM="7281" positionPCM1024="7" />
-<bloc position="672" hauteur="8" type="0" positionPCM="7369" positionPCM1024="7" />
-<bloc position="680" hauteur="8" type="0" positionPCM="7456" positionPCM1024="7" />
-<bloc position="688" hauteur="8" type="0" positionPCM="7544" positionPCM1024="7" />
-<bloc position="696" hauteur="8" type="0" positionPCM="7632" positionPCM1024="7" />
-<bloc position="704" hauteur="8" type="0" positionPCM="7719" positionPCM1024="7" />
-<bloc position="712" hauteur="8" type="0" positionPCM="7807" positionPCM1024="7" />
-<bloc position="720" hauteur="8" type="0" positionPCM="7895" positionPCM1024="7" />
-<bloc position="728" hauteur="8" type="0" positionPCM="7982" positionPCM1024="7" />
-<bloc position="736" hauteur="8" type="0" positionPCM="8070" positionPCM1024="7" />
-<bloc position="744" hauteur="8" type="0" positionPCM="8158" positionPCM1024="7" />
-<bloc position="752" hauteur="8" type="0" positionPCM="8245" positionPCM1024="8" />
-<bloc position="760" hauteur="8" type="0" positionPCM="8333" positionPCM1024="8" />
-<bloc position="768" hauteur="8" type="0" positionPCM="8421" positionPCM1024="8" />
-<bloc position="776" hauteur="8" type="0" positionPCM="8508" positionPCM1024="8" />
-<bloc position="784" hauteur="8" type="0" positionPCM="8596" positionPCM1024="8" />
-<bloc position="792" hauteur="8" type="0" positionPCM="8684" positionPCM1024="8" />
-<bloc position="800" hauteur="8" type="0" positionPCM="8772" positionPCM1024="8" />
-<bloc position="808" hauteur="8" type="0" positionPCM="8859" positionPCM1024="8" />
-<bloc position="816" hauteur="8" type="0" positionPCM="8947" positionPCM1024="8" />
-<bloc position="824" hauteur="8" type="0" positionPCM="9035" positionPCM1024="8" />
-<bloc position="832" hauteur="8" type="0" positionPCM="9122" positionPCM1024="8" />
-<bloc position="840" hauteur="8" type="0" positionPCM="9210" positionPCM1024="8" />
-<bloc position="848" hauteur="8" type="0" positionPCM="9298" positionPCM1024="9" />
-<bloc position="856" hauteur="8" type="0" positionPCM="9385" positionPCM1024="9" />
-<bloc position="864" hauteur="8" type="0" positionPCM="9473" positionPCM1024="9" />
-<bloc position="872" hauteur="8" type="0" positionPCM="9561" positionPCM1024="9" />
-<bloc position="880" hauteur="8" type="0" positionPCM="9648" positionPCM1024="9" />
-<bloc position="888" hauteur="8" type="0" positionPCM="9736" positionPCM1024="9" />
-<bloc position="896" hauteur="8" type="0" positionPCM="9824" positionPCM1024="9" />
-<bloc position="904" hauteur="8" type="0" positionPCM="9911" positionPCM1024="9" />
-<bloc position="912" hauteur="8" type="0" positionPCM="9999" positionPCM1024="9" />
-<bloc position="920" hauteur="8" type="0" positionPCM="10087" positionPCM1024="9" />
-<bloc position="928" hauteur="8" type="0" positionPCM="10175" positionPCM1024="9" />
-<bloc position="936" hauteur="8" type="0" positionPCM="10263" positionPCM1024="10" />
-<bloc position="944" hauteur="8" type="0" positionPCM="10351" positionPCM1024="10" />
+<bloc position="32" hauteur="8" type="0" positionPCM="362496" positionPCM1024="354" positionMS="8219" />
+<bloc position="40" hauteur="8" type="0" positionPCM="452608" positionPCM1024="442" positionMS="10263" />
+<bloc position="48" hauteur="8" type="0" positionPCM="542720" positionPCM1024="530" positionMS="12306" />
+<bloc position="56" hauteur="8" type="0" positionPCM="631808" positionPCM1024="617" positionMS="14326" />
+<bloc position="64" hauteur="8" type="0" positionPCM="721920" positionPCM1024="705" positionMS="16370" />
+<bloc position="72" hauteur="8" type="0" positionPCM="812032" positionPCM1024="793" positionMS="18413" />
+<bloc position="80" hauteur="8" type="0" positionPCM="901120" positionPCM1024="880" positionMS="20433" />
+<bloc position="88" hauteur="8" type="0" positionPCM="991232" positionPCM1024="968" positionMS="22476" />
+<bloc position="96" hauteur="8" type="0" positionPCM="1081344" positionPCM1024="1056" positionMS="24520" />
+<bloc position="104" hauteur="8" type="0" positionPCM="1171456" positionPCM1024="1144" positionMS="26563" />
+<bloc position="112" hauteur="8" type="0" positionPCM="1260544" positionPCM1024="1231" positionMS="28583" />
+<bloc position="120" hauteur="8" type="0" positionPCM="1350656" positionPCM1024="1319" positionMS="30627" />
+<bloc position="128" hauteur="8" type="0" positionPCM="1439744" positionPCM1024="1406" positionMS="32647" />
+<bloc position="136" hauteur="8" type="0" positionPCM="1529856" positionPCM1024="1494" positionMS="34690" />
+<bloc position="144" hauteur="8" type="0" positionPCM="1619968" positionPCM1024="1582" positionMS="36733" />
+<bloc position="152" hauteur="8" type="0" positionPCM="1709056" positionPCM1024="1669" positionMS="38754" />
+<bloc position="160" hauteur="8" type="0" positionPCM="1799168" positionPCM1024="1757" positionMS="40797" />
+<bloc position="168" hauteur="8" type="0" positionPCM="1889280" positionPCM1024="1845" positionMS="42840" />
+<bloc position="176" hauteur="8" type="0" positionPCM="1979392" positionPCM1024="1933" positionMS="44884" />
+<bloc position="184" hauteur="8" type="0" positionPCM="2068480" positionPCM1024="2020" positionMS="46904" />
+<bloc position="192" hauteur="8" type="0" positionPCM="2158592" positionPCM1024="2108" positionMS="48947" />
+<bloc position="200" hauteur="8" type="0" positionPCM="2247680" positionPCM1024="2195" positionMS="50967" />
+<bloc position="208" hauteur="8" type="0" positionPCM="2337792" positionPCM1024="2283" positionMS="53011" />
+<bloc position="216" hauteur="8" type="0" positionPCM="2427904" positionPCM1024="2371" positionMS="55054" />
+<bloc position="224" hauteur="8" type="0" positionPCM="2518016" positionPCM1024="2459" positionMS="57097" />
+<bloc position="232" hauteur="8" type="0" positionPCM="2607104" positionPCM1024="2546" positionMS="59118" />
+<bloc position="240" hauteur="8" type="0" positionPCM="2697216" positionPCM1024="2634" positionMS="61161" />
+<bloc position="248" hauteur="8" type="0" positionPCM="2787328" positionPCM1024="2722" positionMS="63204" />
+<bloc position="256" hauteur="8" type="0" positionPCM="2876416" positionPCM1024="2809" positionMS="65224" />
+<bloc position="264" hauteur="8" type="0" positionPCM="2966528" positionPCM1024="2897" positionMS="67268" />
+<bloc position="272" hauteur="8" type="0" positionPCM="3056640" positionPCM1024="2985" positionMS="69311" />
+<bloc position="280" hauteur="8" type="0" positionPCM="3145728" positionPCM1024="3072" positionMS="71331" />
+<bloc position="288" hauteur="8" type="0" positionPCM="3235840" positionPCM1024="3160" positionMS="73375" />
+<bloc position="296" hauteur="8" type="0" positionPCM="3325952" positionPCM1024="3248" positionMS="75418" />
+<bloc position="304" hauteur="8" type="0" positionPCM="3416064" positionPCM1024="3336" positionMS="77461" />
+<bloc position="312" hauteur="8" type="0" positionPCM="3505152" positionPCM1024="3423" positionMS="79481" />
+<bloc position="320" hauteur="8" type="0" positionPCM="3595264" positionPCM1024="3511" positionMS="81525" />
+<bloc position="328" hauteur="8" type="0" positionPCM="3685376" positionPCM1024="3599" positionMS="83568" />
+<bloc position="336" hauteur="8" type="0" positionPCM="3774464" positionPCM1024="3686" positionMS="85588" />
+<bloc position="344" hauteur="8" type="0" positionPCM="3864576" positionPCM1024="3774" positionMS="87632" />
+<bloc position="352" hauteur="8" type="0" positionPCM="3953664" positionPCM1024="3861" positionMS="89652" />
+<bloc position="360" hauteur="8" type="0" positionPCM="4043776" positionPCM1024="3949" positionMS="91695" />
+<bloc position="368" hauteur="8" type="0" positionPCM="4133888" positionPCM1024="4037" positionMS="93738" />
+<bloc position="376" hauteur="8" type="0" positionPCM="4224000" positionPCM1024="4125" positionMS="95782" />
+<bloc position="384" hauteur="8" type="0" positionPCM="4313088" positionPCM1024="4212" positionMS="97802" />
+<bloc position="392" hauteur="8" type="0" positionPCM="4403200" positionPCM1024="4300" positionMS="99845" />
+<bloc position="400" hauteur="8" type="0" positionPCM="4493312" positionPCM1024="4388" positionMS="101889" />
+<bloc position="408" hauteur="8" type="0" positionPCM="4582400" positionPCM1024="4475" positionMS="103909" />
+<bloc position="416" hauteur="8" type="0" positionPCM="4672512" positionPCM1024="4563" positionMS="105952" />
+<bloc position="424" hauteur="8" type="0" positionPCM="4762624" positionPCM1024="4651" positionMS="107996" />
+<bloc position="432" hauteur="8" type="0" positionPCM="4851712" positionPCM1024="4738" positionMS="110016" />
+<bloc position="440" hauteur="8" type="0" positionPCM="4941824" positionPCM1024="4826" positionMS="112059" />
+<bloc position="448" hauteur="8" type="0" positionPCM="5031936" positionPCM1024="4914" positionMS="114102" />
+<bloc position="456" hauteur="8" type="0" positionPCM="5121024" positionPCM1024="5001" positionMS="116122" />
+<bloc position="464" hauteur="8" type="0" positionPCM="5211136" positionPCM1024="5089" positionMS="118166" />
+<bloc position="472" hauteur="8" type="0" positionPCM="5301248" positionPCM1024="5177" positionMS="120209" />
+<bloc position="480" hauteur="8" type="0" positionPCM="5390336" positionPCM1024="5264" positionMS="122229" />
+<bloc position="488" hauteur="8" type="0" positionPCM="5480448" positionPCM1024="5352" positionMS="124273" />
+<bloc position="496" hauteur="8" type="0" positionPCM="5570560" positionPCM1024="5440" positionMS="126316" />
+<bloc position="504" hauteur="8" type="0" positionPCM="5659648" positionPCM1024="5527" positionMS="128336" />
+<bloc position="512" hauteur="8" type="0" positionPCM="5749760" positionPCM1024="5615" positionMS="130380" />
+<bloc position="520" hauteur="8" type="0" positionPCM="5839872" positionPCM1024="5703" positionMS="132423" />
+<bloc position="528" hauteur="8" type="0" positionPCM="5929984" positionPCM1024="5791" positionMS="134466" />
+<bloc position="536" hauteur="8" type="0" positionPCM="6019072" positionPCM1024="5878" positionMS="136486" />
+<bloc position="544" hauteur="8" type="0" positionPCM="6109184" positionPCM1024="5966" positionMS="138530" />
+<bloc position="552" hauteur="8" type="0" positionPCM="6199296" positionPCM1024="6054" positionMS="140573" />
+<bloc position="560" hauteur="8" type="0" positionPCM="6288384" positionPCM1024="6141" positionMS="142593" />
+<bloc position="568" hauteur="8" type="0" positionPCM="6378496" positionPCM1024="6229" positionMS="144637" />
+<bloc position="576" hauteur="8" type="0" positionPCM="6468608" positionPCM1024="6317" positionMS="146680" />
+<bloc position="584" hauteur="8" type="0" positionPCM="6557696" positionPCM1024="6404" positionMS="148700" />
+<bloc position="592" hauteur="8" type="0" positionPCM="6647808" positionPCM1024="6492" positionMS="150743" />
+<bloc position="600" hauteur="8" type="0" positionPCM="6737920" positionPCM1024="6580" positionMS="152787" />
+<bloc position="608" hauteur="8" type="0" positionPCM="6827008" positionPCM1024="6667" positionMS="154807" />
+<bloc position="616" hauteur="8" type="0" positionPCM="6917120" positionPCM1024="6755" positionMS="156850" />
+<bloc position="624" hauteur="8" type="0" positionPCM="7007232" positionPCM1024="6843" positionMS="158894" />
+<bloc position="632" hauteur="8" type="0" positionPCM="7096320" positionPCM1024="6930" positionMS="160914" />
+<bloc position="640" hauteur="8" type="0" positionPCM="7186432" positionPCM1024="7018" positionMS="162957" />
+<bloc position="648" hauteur="8" type="0" positionPCM="7276544" positionPCM1024="7106" positionMS="165000" />
+<bloc position="656" hauteur="8" type="0" positionPCM="7365632" positionPCM1024="7193" positionMS="167021" />
+<bloc position="664" hauteur="8" type="0" positionPCM="7455744" positionPCM1024="7281" positionMS="169064" />
+<bloc position="672" hauteur="8" type="0" positionPCM="7545856" positionPCM1024="7369" positionMS="171107" />
+<bloc position="680" hauteur="8" type="0" positionPCM="7634944" positionPCM1024="7456" positionMS="173127" />
+<bloc position="688" hauteur="8" type="0" positionPCM="7725056" positionPCM1024="7544" positionMS="175171" />
+<bloc position="696" hauteur="8" type="0" positionPCM="7815168" positionPCM1024="7632" positionMS="177214" />
+<bloc position="704" hauteur="8" type="0" positionPCM="7904256" positionPCM1024="7719" positionMS="179234" />
+<bloc position="712" hauteur="8" type="0" positionPCM="7994368" positionPCM1024="7807" positionMS="181278" />
+<bloc position="720" hauteur="8" type="0" positionPCM="8084480" positionPCM1024="7895" positionMS="183321" />
+<bloc position="728" hauteur="8" type="0" positionPCM="8173568" positionPCM1024="7982" positionMS="185341" />
+<bloc position="736" hauteur="8" type="0" positionPCM="8263680" positionPCM1024="8070" positionMS="187385" />
+<bloc position="744" hauteur="8" type="0" positionPCM="8353792" positionPCM1024="8158" positionMS="189428" />
+<bloc position="752" hauteur="8" type="0" positionPCM="8442880" positionPCM1024="8245" positionMS="191448" />
+<bloc position="760" hauteur="8" type="0" positionPCM="8532992" positionPCM1024="8333" positionMS="193491" />
+<bloc position="768" hauteur="8" type="0" positionPCM="8623104" positionPCM1024="8421" positionMS="195535" />
+<bloc position="776" hauteur="8" type="0" positionPCM="8712192" positionPCM1024="8508" positionMS="197555" />
+<bloc position="784" hauteur="8" type="0" positionPCM="8802304" positionPCM1024="8596" positionMS="199598" />
+<bloc position="792" hauteur="8" type="0" positionPCM="8892416" positionPCM1024="8684" positionMS="201642" />
+<bloc position="800" hauteur="8" type="0" positionPCM="8982528" positionPCM1024="8772" positionMS="203685" />
+<bloc position="808" hauteur="8" type="0" positionPCM="9071616" positionPCM1024="8859" positionMS="205705" />
+<bloc position="816" hauteur="8" type="0" positionPCM="9161728" positionPCM1024="8947" positionMS="207748" />
+<bloc position="824" hauteur="8" type="0" positionPCM="9251840" positionPCM1024="9035" positionMS="209792" />
+<bloc position="832" hauteur="8" type="0" positionPCM="9340928" positionPCM1024="9122" positionMS="211812" />
+<bloc position="840" hauteur="8" type="0" positionPCM="9431040" positionPCM1024="9210" positionMS="213855" />
+<bloc position="848" hauteur="8" type="0" positionPCM="9521152" positionPCM1024="9298" positionMS="215899" />
+<bloc position="856" hauteur="8" type="0" positionPCM="9610240" positionPCM1024="9385" positionMS="217919" />
+<bloc position="864" hauteur="8" type="0" positionPCM="9700352" positionPCM1024="9473" positionMS="219962" />
+<bloc position="872" hauteur="8" type="0" positionPCM="9790464" positionPCM1024="9561" positionMS="222005" />
+<bloc position="880" hauteur="8" type="0" positionPCM="9879552" positionPCM1024="9648" positionMS="224026" />
+<bloc position="888" hauteur="8" type="0" positionPCM="9969664" positionPCM1024="9736" positionMS="226069" />
+<bloc position="896" hauteur="8" type="0" positionPCM="10059776" positionPCM1024="9824" positionMS="228112" />
+<bloc position="904" hauteur="8" type="0" positionPCM="10148864" positionPCM1024="9911" positionMS="230132" />
+<bloc position="912" hauteur="8" type="0" positionPCM="10238976" positionPCM1024="9999" positionMS="232176" />
+<bloc position="920" hauteur="8" type="0" positionPCM="10329088" positionPCM1024="10087" positionMS="234219" />
+<bloc position="928" hauteur="8" type="0" positionPCM="10419200" positionPCM1024="10175" positionMS="236263" />
+<bloc position="936" hauteur="8" type="0" positionPCM="10509312" positionPCM1024="10263" positionMS="238306" />
+<bloc position="944" hauteur="8" type="0" positionPCM="10599424" positionPCM1024="10351" positionMS="240349" />
