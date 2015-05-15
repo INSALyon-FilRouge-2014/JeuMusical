@@ -44,13 +44,14 @@ int main(int argc, char *argv[])
 	//affichage des beats
 	float* beat = beatdec->get_beat();
 	Obstacle** tabObstacles = lvlGen->getTabObstacles();
-	int currentPos;
+	int currentPos, currentMS;
 	bool inBeat = false;
 	int beatCounter = 0;
 	snd_mng->pause();
 	while (true)
 	{
 		currentPos = snd_mng->get_current_time_PCM() / 1024.f;
+		currentMS = snd_mng->get_current_time_MS();
 		//if (beat[currentPos] > 0)
 		//	cout << beat[currentPos] << endl;
 		if (beat[currentPos] > 0 && inBeat == false)//on entre dans un beat
@@ -65,7 +66,6 @@ int main(int argc, char *argv[])
 		else if (beat[currentPos] < 1 && inBeat == true)
 		{
 			inBeat = false;
-			//cout << beat[currentPos] << endl;
 		}
 	}
 	return EXIT_SUCCESS;

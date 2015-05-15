@@ -77,8 +77,15 @@ LevelGenerator::LevelGenerator(BeatDetector* beat_dt, SoundManager* snd_mgr, str
 	cout << "Nombre de beat théorique (bpm*durée(min)) : " << bpm*length_MS/1000/60 << endl;
 	
 	//initialisation du tableau des obstacles
+	PCMtoMS = new int[length_PCM / 1024];
 	tabObstacles = new Obstacle*[length_PCM / 1024];
-	for (int i = 0; i<length_PCM / 1024; i++) tabObstacles[i] = NULL;
+	for (int i = 0; i < length_PCM / 1024; i++)
+	{
+		tabObstacles[i] = NULL;
+		PCMtoMS[i] = snd_mgr->getMSFromPCM(i);
+	}
+
+	
 
 	//création du fichier xml
 	this->xml_writer = new XMLWriter(musicName+".xml",musicName,nbBlocks, bpm, vitesse);
@@ -113,7 +120,7 @@ void LevelGenerator::generateV1()
 			if (beatCounter % 4 == 0)	// tous les 4 beat on demarre une nouvelle mesure.
 			{
 				// Au debut d'une mesure
-				Obstacle ob(1u, i, 1u, Obstacle::CAISSE);
+				Obstacle ob(beatCounter*BLOCKS_BY_BEAT, i * 1024, PCMtoMS[i], 8, Obstacle::CAISSE);
 				obstList.push_back(ob);
 				tabObstacles[i] = &ob;
 				xml_writer->writeObstacle(ob);
@@ -160,7 +167,7 @@ void LevelGenerator::generateV2()
 			if (beatCounter % 4 == 0)	// tous les 4 beat on demarre une nouvelle mesure.
 			{
 				// Au debut d'une mesure
-				Obstacle ob(beatCounter*BLOCKS_BY_BEAT, i, 8, Obstacle::CAISSE);
+				Obstacle ob(beatCounter*BLOCKS_BY_BEAT, i*1024,PCMtoMS[i], 8 , Obstacle::CAISSE);
 				obstList.push_back(ob);
 				tabObstacles[i] = &ob;
 				xml_writer->writeObstacle(ob);
@@ -170,3 +177,4 @@ void LevelGenerator::generateV2()
 		}
 	}
 }
+

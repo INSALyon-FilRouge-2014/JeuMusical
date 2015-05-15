@@ -32,6 +32,7 @@ private:
 	int nbBlocks;		//nombre de blocks présents dans le niveau
 	unsigned int length_MS; // longueur de la musique en ms
 	unsigned int length_PCM; // longueur de la musique en PCM (echantillons)
+	int* PCMtoMS;		//tableau de correspondance entre PCM et MS
 	Obstacle** tabObstacles;	//tableau de la taille du morceau contenant des NULL ou un obstacle s'il y en a un
 	std::string musicName;
 	std::vector<Obstacle> obstList;
