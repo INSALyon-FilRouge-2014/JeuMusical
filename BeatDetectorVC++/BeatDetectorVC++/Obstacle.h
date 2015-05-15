@@ -19,7 +19,9 @@ public:
 
 	Obstacle(unsigned int pos, unsigned int pcmpos, int h, TypeObstacle typ)
 		:position(pos), PCMPosition(pcmpos), hauteur(h), type(typ){}
-	 
+
+	virtual ~Obstacle(){}
+
 private:
 	unsigned int position;//position en X
 

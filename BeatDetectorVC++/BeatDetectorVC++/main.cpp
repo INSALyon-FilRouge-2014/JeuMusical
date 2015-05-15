@@ -20,6 +20,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
+		system("echo pwd : %cd%");
 		cout << "Fichier introuvable" << endl;
 		return EXIT_FAILURE;
 	}
@@ -35,7 +36,7 @@ int main(int argc, char *argv[])
 	beatdec->audio_process(); // launch beats detection
 
 	LevelGenerator * lvlGen = new LevelGenerator(beatdec, snd_mng, string(argv[1]));
-	lvlGen->generateV1();
+	lvlGen->generateV2();
 
 	system("pause");
 
@@ -57,7 +58,7 @@ int main(int argc, char *argv[])
 			inBeat = true;
 			cout << "BEAT ! no" << beatCounter;
 			if (tabObstacles[currentPos] != NULL)
-				cout << " -- OBSTACLE ! ";
+				cout << " -- OBSTACLE ! type:" << tabObstacles[currentPos]->getType() << " - hauteur:" << tabObstacles[currentPos]->getHauteur();
 			cout << endl;
 			beatCounter++;
 		}

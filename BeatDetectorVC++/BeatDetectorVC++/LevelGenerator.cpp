@@ -14,7 +14,6 @@ LevelGenerator::LevelGenerator(BeatDetector* beat_dt, SoundManager* snd_mgr, str
 	cout << "Constructeur du LevelGenerator" << endl;
 
 	this->beat_dt = beat_dt;
-
 	//récupération du  bpm flottant
 	bpm = beat_dt->get_tempo_f();
 
@@ -80,6 +79,15 @@ LevelGenerator::LevelGenerator(BeatDetector* beat_dt, SoundManager* snd_mgr, str
 	//initialisation du tableau des obstacles
 	tabObstacles = new Obstacle*[length_PCM / 1024];
 	for (int i = 0; i<length_PCM / 1024; i++) tabObstacles[i] = NULL;
+
+	//création du fichier xml
+	this->xml_writer = new XMLWriter(musicName+".xml",musicName,nbBlocks, bpm, vitesse);
+}
+
+
+LevelGenerator::~LevelGenerator()
+{
+	delete xml_writer;
 }
 
 void LevelGenerator::generateV1()
@@ -108,6 +116,54 @@ void LevelGenerator::generateV1()
 				Obstacle ob(1u, i, 1u, Obstacle::CAISSE);
 				obstList.push_back(ob);
 				tabObstacles[i] = &ob;
+				xml_writer->writeObstacle(ob);
+				mesureCounter++;
+			}
+			beatCounter++;
+		}
+	}
+}
+
+
+void LevelGenerator::generateV2()
+{
+	int currentHeight = 0;
+	int currentPos = 0;
+	int mesureCounter = 0;
+	unsigned int beatCounter = 0;
+	// Idées : La majorité des musiques sont en tempo binaire (4/4 pour la plupart)
+	// Pour placer les obstacles on peut donc regrouper 4 BEATS ensembles
+
+
+	// On commence par laisser le temps à l'utilisateur 4 Mesures
+	// Positionnement du premier obstacle
+	float* beats = beat_dt->get_beat();
+
+	unsigned int i = 0;
+	while (beatCounter < 15)
+	{
+		if (beats[i] == 1.f)
+		{
+			beatCounter++;
+		}
+		i++;
+	}
+
+
+	//parcours de tous les beats suivants :
+	for (; i < length_PCM / 1024; i++)
+		//i est ici l'indice mais egalement la position en PCM1024
+	{
+		if (beats[i] == 1.f)
+		{
+			//situé sur un beat
+			if (beatCounter % 4 == 0)	// tous les 4 beat on demarre une nouvelle mesure.
+			{
+				// Au debut d'une mesure
+				Obstacle ob(beatCounter*BLOCKS_BY_BEAT, i, 8, Obstacle::CAISSE);
+				obstList.push_back(ob);
+				tabObstacles[i] = &ob;
+				xml_writer->writeObstacle(ob);
 				mesureCounter++;
 			}
 			beatCounter++;
