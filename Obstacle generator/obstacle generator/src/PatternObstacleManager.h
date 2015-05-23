@@ -7,7 +7,9 @@ class PatternObstacleManager
 public:
     void addPatternObstacle(PatternObstacle pat);
 
-	PatternObstacle getRandomPattern(int length, int max_height, int start_height);
+	PatternObstacle getRandomPattern(int length, int start_height);
+
+	void loadPatterns();
 
 	PatternObstacleManager(int seed);
 

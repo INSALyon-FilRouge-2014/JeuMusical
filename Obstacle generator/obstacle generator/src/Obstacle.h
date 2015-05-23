@@ -1,6 +1,7 @@
 #ifndef OBSTACLE_H
 #define OBSTACLE_H
 
+#include <cstdio>
 #include <iostream>
 #include <sstream>
 
@@ -26,10 +27,17 @@ public:
 
 	void setHauteur(int h){ hauteur = h; }
 
+	void setPositions(unsigned int pos, unsigned int pcmpos, int mspos) {position = pos; PCMPosition = pcmpos; MSPosition = mspos;}
+
 	TypeObstacle getType(){ return type; }
 
+	void display(){printf("Obstacle : hauteur = %d ; type = %d", hauteur , type); }
+
 	Obstacle(unsigned int pos, unsigned int pcmpos, int mspos ,int h, TypeObstacle typ)
-		:position(pos), PCMPosition(pcmpos), hauteur(h), type(typ), MSPosition(mspos){}
+		:position(pos), MSPosition(mspos), PCMPosition(pcmpos), hauteur(h), type(typ){}
+
+	Obstacle(int h, TypeObstacle typ)
+		:position(0), MSPosition(0), PCMPosition(0), hauteur(h), type(typ){}
 
 	virtual ~Obstacle(){}
 

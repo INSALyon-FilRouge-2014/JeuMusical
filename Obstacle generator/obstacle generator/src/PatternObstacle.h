@@ -3,17 +3,22 @@
 
 #include <iostream>
 #include <vector>
+#include <map>
 #include "Obstacle.h"
 
 using namespace std;
+
+typedef map<int,vector<Obstacle>> Pattern;
 
 class PatternObstacle
 {
 
 public:
-	void addObstacle(Obstacle o, int index);
+	void addObstacle(int index, Obstacle o);
 
-	vector<Obstacle> getObstacles();
+	Pattern getObstacles();
+
+   	Pattern getFilledObstacles();
 
 	int getDenivelee();//retourne la denivelée, positive (donc descendante comme plafond = 1)
 
@@ -29,15 +34,17 @@ public:
 
 	int getEndHeight();
 
+    void display();
+
 	PatternObstacle();
 
-	PatternObstacle(vector<Obstacle> vo);
+	PatternObstacle(Pattern pat);
 
 	virtual ~PatternObstacle();
 
 
 private:
-	vector<Obstacle> obstacles;
+	Pattern obstacles;
 
 	int h_max; //hauteur max parmis les obstacles
 
