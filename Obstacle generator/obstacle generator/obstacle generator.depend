@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1432321591 source:c:\users\loïc.lt-travail.000\documents\cours\insa\3if\fil rouge\obstacle generator\obstacle generator\src\main.cpp
+	<iostream>
+	<cstdlib>
+	<vector>
+	<time.h>
+	"PatternObstacle.h"
+	"PatternObstacleManager.h"
+
+1432323767 c:\users\loïc.lt-travail.000\documents\cours\insa\3if\fil rouge\obstacle generator\obstacle generator\src\patternobstacle.h
+	<iostream>
+	<vector>
+	"Obstacle.h"
+
+1432298754 c:\users\loïc.lt-travail.000\documents\cours\insa\3if\fil rouge\obstacle generator\obstacle generator\src\obstacle.h
+	<iostream>
+	<sstream>
+
+1432320711 source:c:\users\loïc.lt-travail.000\documents\cours\insa\3if\fil rouge\obstacle generator\obstacle generator\src\patternobstacle.cpp
+	<iostream>
+	<vector>
+	"Obstacle.h"
+	"PatternObstacle.h"
+
+1432322521 c:\users\loïc.lt-travail.000\documents\cours\insa\3if\fil rouge\obstacle generator\obstacle generator\src\patternobstaclemanager.h
+	<iostream>
+	<vector>
+	"PatternObstacle.h"
+
