@@ -45,6 +45,9 @@
     </ClInclude>
     <ClInclude Include="headers\stdafx.h" />
     <ClInclude Include="headers\targetver.h" />
+    <ClInclude Include="headers\SoundManager.h">
+      <Filter>Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="LeMeilleurJeuDuMonde.rc" />
@@ -112,6 +115,9 @@
     <ClCompile Include="src\stdafx.cpp" />
     <ClCompile Include="src\GlideState.cpp">
       <Filter>Character</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SoundManager.cpp">
+      <Filter>Game</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

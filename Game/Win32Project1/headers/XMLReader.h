@@ -8,13 +8,24 @@
 #include "Platform.h"
 #include "tinyxml.h"
 
+struct LevelInfo
+{
+	std::string nom;
+	int longueur;
+	int bpm;
+	double vitesse;
+
+};
+
+
 class XMLReader
 {
 public:
-	XMLReader(char* str);
+	XMLReader(std::string str);
 	~XMLReader();
 	//Lis toutes les balises de type "bloc" et place les objets ainsi créés dans un tableau
-	std::vector<Platform>* read();
+	std::vector<Platform>* readPlatform();
+	LevelInfo readInfo();
 protected:
 	TiXmlDocument doc;
 };

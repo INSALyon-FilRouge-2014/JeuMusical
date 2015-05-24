@@ -61,7 +61,7 @@ void Character::HandleEvent(Event & event)
 	
 
 
-void Character::Update(Map & level)
+void Character::Update(Map & level, unsigned int temps)
 {
 
 
@@ -71,7 +71,7 @@ void Character::Update(Map & level)
 	if(updateClock.getElapsedTime()>=Time(milliseconds(20)))
 	{
 		actualState->Update(*this);
-		pos.x += v_x;
+		pos.x = (double)(temps/1000.)*v_x*64.;
 		//cout << "deplacement: " << v_x << endl;
 		actualSprite->setPosition(pos.x, pos.y);
 		updateClock.restart();
@@ -101,7 +101,7 @@ void Character::Draw(RenderWindow & window)
 	window.draw(*actualSprite);
 }
 
-void Character::Move(float x, int y)
+void Character::Move(double x, double y)
 {
 
 	pos.x += x;

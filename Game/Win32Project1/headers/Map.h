@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <vector>
+#include <string>
 #include "Platform.h"
 #include "Character.h"
 
@@ -10,6 +11,7 @@ class Map
 {
 public:
 	Map();
+	Map(std::string nomLevel);
 	virtual ~Map();
 	void Draw(sf::RenderWindow &window);
 	bool Collision(Character&);
