@@ -4,17 +4,22 @@
 #include <sstream>
 #include <string>
 #include <SFML/Graphics.hpp>
+#include "SoundManager.h"
+#include "XMLReader.h"
 using namespace std;
 using namespace sf;
-InGame::InGame(float charSpeed)
+InGame::InGame(float charSpeed, string name)
 {
-	personnage = new Character(charSpeed);
+	XMLReader* reader = new XMLReader(name+".xml");
+	info = reader->readInfo();
+	personnage = new Character(info.vitesse);
+	delete reader;
 	dist.setString("0");
 	//dist.setPosition(300, 300);
 	dist.setColor(sf::Color::Red);
 	dist.setCharacterSize(30);
-
-	
+	cout << "creation du niveau" << endl;
+	level = new Map(name+".xml");
 	if (!font.loadFromFile("AmaticB.ttf"))
 	{
 		// erreur...
@@ -31,6 +36,17 @@ InGame::InGame(float charSpeed)
 	time.setCharacterSize(30);
 	time.setColor(sf::Color::Black);
 	time.setPosition(50, 590);
+
+	titre.setString(name);
+	titre.setFont(font);
+	time.setCharacterSize(30);
+	time.setColor(sf::Color::Black);
+	time.setPosition(50, 590);
+
+	sm.load_song((char*)string(name+".mp3").c_str());
+	sm.play();
+
+
 	clock.restart();
 }
 
@@ -39,11 +55,12 @@ void InGame::Update(sf::RenderWindow & window)
 	window.clear();
 	HandleEvent(window);
 
-	personnage->Update(level);
-
-	level.Draw(window);
+	
+	personnage->Update(*level, sm.get_current_time_MS());
+	cout << sm.get_current_time_MS() << endl;
+	level->Draw(window);
 	personnage->Draw(window);
-	if (level.Collision(*personnage))
+	if (level->Collision(*personnage))
 	{
 		cout << "perdu" << endl;
 		Restart();
@@ -59,10 +76,10 @@ void InGame::Update(sf::RenderWindow & window)
 
 	std::ostringstream s;
 	s << (int)clock.getElapsedTime().asSeconds();
-	if ((int)clock.getElapsedTime().asSeconds() == 10)
+	/*if ((int)clock.getElapsedTime().asSeconds() == 10)
 	{
 		cout << personnage->GetPos().x << endl;
-	}
+	}*/
 	time.setString("time: " + s.str());
 	time.setPosition(personnage->GetPos().x - 150, 560);
 	window.draw(time);
@@ -70,9 +87,10 @@ void InGame::Update(sf::RenderWindow & window)
 
 void InGame::Restart()
 {
+	sm.reset();
 	clock.restart();
 	personnage->Replace();
-	level.Reset();
+	level->Reset();
 }
 
 

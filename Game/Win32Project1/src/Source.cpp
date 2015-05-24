@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
-#include "InGame.h"
 #include <iostream>
+#include "InGame.h"
 using namespace std;
 using namespace sf;
 int main()
@@ -13,7 +13,8 @@ int main()
 	View vue(FloatRect(0,320,1024,640));
 	vue.setCenter(512, 320);
 	window.setView(vue);
-	InGame gameState(10);
+	string name = "face-to-face";
+	InGame gameState(10, name);
 	while (window.isOpen())
     {
 		window.clear();

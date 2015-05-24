@@ -12,7 +12,7 @@ const std::string SOL_TEXTURE = "Sol.png";
 const int MAP_SIZE = 6000;
 const int SIZE_WINDOW_Y = 640;
 using namespace sf;
-Map::Map()
+Map::Map(string nomLevel)
 {
 	if (!mapTexture.loadFromFile(MAP_TEXTURE))
 	{
@@ -34,8 +34,8 @@ Map::Map()
 		// error...
 	}
 
-	XMLReader* reader = new XMLReader("face to face.xml");
-	platformtab = reader->read();
+	XMLReader* reader = new XMLReader(nomLevel);
+	platformtab = reader->readPlatform();
 	for (unsigned int i = 0; i < platformtab->size(); i++)
 	{
 		platformtab->at(i).SetTexture(&platTexture[(platformtab->at(i)).GetType()]);

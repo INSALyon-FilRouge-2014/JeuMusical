@@ -20,15 +20,15 @@ public:
 	Character(float speed);
 	virtual ~Character(void);
 	void HandleEvent(sf::Event &);
-	void Update(Map &);
+	void Update(Map &, unsigned int);
 	void Draw(sf::RenderWindow &);
-	void Move(float, int);
+	void Move(double, double);
 	void Replace();
 	void SetSprite(sf::Sprite*);
 	void SetRunState();
 	void SetJumpState(int);
-	sf::Vector2f GetPos(){ return pos; };
-	void SetPos(float x, float y){ pos.x = x; pos.y = y; };
+	sf::Vector2<double> GetPos(){ return pos; };
+	void SetPos(double x, double y){ pos.x = x; pos.y = y; };
 	sf::FloatRect GetHitbox(){ return actualSprite->getGlobalBounds(); };
 	CharState* GetState(){ return actualState; };
 
@@ -38,9 +38,9 @@ protected:
 	sf::Clock updateClock2;
 	CharState* actualState;
 	JumpState* jumpState;
-	float v_x;
+	double v_x;
 	RunState* runState;
-	sf::Vector2f pos;
+	sf::Vector2<double> pos;
 
 
 	/*gestion des sons*/
