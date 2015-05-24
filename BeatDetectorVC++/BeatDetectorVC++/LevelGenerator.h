@@ -6,6 +6,7 @@
 #include "SoundManager.h"
 #include "Obstacle.h"
 #include "XMLWriter.h"
+#include "PatternObstacleManager.h"
 
 //en block par beat
 #define BLOCKS_BY_BEAT 2
@@ -17,6 +18,7 @@ public:
 	~LevelGenerator();
 	void generateV1();
 	void generateV2();
+	void generateV3();
 	Obstacle** getTabObstacles(){ return tabObstacles; }
 
 private:
@@ -26,6 +28,7 @@ private:
 
 	BeatDetector* beat_dt;
 	XMLWriter* xml_writer;
+	PatternObstacleManager* POM;
 	float bpm;			//en beat par seconde
 	double vitesse;		//en block par seconde
 	int nbObstacles;	//nombre d'obstacles présents dans le niveau

@@ -13,7 +13,7 @@ int main()
 
     cout << "Creation du PatternObstacleManager ..." << endl;
     PatternObstacleManager POM(12343);
-    cout << "Chargelent des patterns ..." <<endl;
+    cout << "Chargement des patterns ..." <<endl;
     POM.loadPatterns();
     cout << "Selection pseudo-aleatoire d'un pattern"<< endl;
 

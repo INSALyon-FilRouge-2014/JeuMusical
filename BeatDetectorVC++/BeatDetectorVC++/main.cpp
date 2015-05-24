@@ -36,7 +36,8 @@ int main(int argc, char *argv[])
 	beatdec->audio_process(); // launch beats detection
 
 	LevelGenerator * lvlGen = new LevelGenerator(beatdec, snd_mng, string(argv[1]));
-	lvlGen->generateV2();
+	cout << "Generation du niveau ... ... ..." << endl;
+	lvlGen->generateV3();
 
 	system("pause");
 

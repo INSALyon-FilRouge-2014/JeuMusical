@@ -85,13 +85,19 @@
     <ClCompile Include="BeatDetector.cpp" />
     <ClCompile Include="LevelGenerator.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PatternObstacle.cpp" />
+    <ClCompile Include="PatternObstacleManager.cpp" />
     <ClCompile Include="SoundManager.cpp" />
+    <ClCompile Include="XMLWriter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BeatDetector.h" />
     <ClInclude Include="LevelGenerator.h" />
     <ClInclude Include="Obstacle.h" />
+    <ClInclude Include="PatternObstacle.h" />
+    <ClInclude Include="PatternObstacleManager.h" />
     <ClInclude Include="SoundManager.h" />
+    <ClInclude Include="XMLWriter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
