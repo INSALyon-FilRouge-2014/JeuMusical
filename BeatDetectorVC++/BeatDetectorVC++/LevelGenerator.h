@@ -19,6 +19,7 @@ public:
 	void generateV1();
 	void generateV2();
 	void generateV3();
+	//void generateV4();
 	Obstacle** getTabObstacles(){ return tabObstacles; }
 
 private:

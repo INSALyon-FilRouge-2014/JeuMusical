@@ -86,10 +86,70 @@ void PatternObstacleManager::loadPatterns()
     p4.addObstacle(2,ob_3N);
     p4.addObstacle(3,ob_3N);
 
-    addPatternObstacle(p1);
-    addPatternObstacle(p2);
+	/** Pattern 5
+	*1				
+	*2				N
+	*3		N	N
+	*4	N
+	**/
+	p5.addObstacle(0, ob_8N);
+	p5.addObstacle(1, ob_7N);
+	p5.addObstacle(2, ob_7N);
+	p5.addObstacle(3, ob_6N);
+
+	/** Pattern 6
+	*1
+	*2	N
+	*3		N	N
+	*4				N
+	**/
+	p6.addObstacle(0, ob_4N);
+	p6.addObstacle(1, ob_5N);
+	p6.addObstacle(2, ob_5N);
+	p6.addObstacle(3, ob_6N);
+
+	/** Pattern 7
+	*1
+	*2
+	*3		N	N
+	*4	N			N
+	**/
+	p7.addObstacle(0, ob_4N);
+	p7.addObstacle(1, ob_3N);
+	p7.addObstacle(2, ob_3N);
+	p7.addObstacle(3, ob_4N);
+
+	/** Pattern 8
+	*1
+	*2	N			N
+	*3		N	N
+	*4
+	**/
+	p8.addObstacle(0, ob_4N);
+	p8.addObstacle(1, ob_5N);
+	p8.addObstacle(2, ob_5N);
+	p8.addObstacle(3, ob_4N);
+
+	/** Pattern 9
+	*1	N	N
+	*2		
+	*3				N
+	*4			N
+	**/
+	p9.addObstacle(0, ob_4N);
+	p9.addObstacle(1, ob_4N);
+	p9.addObstacle(2, ob_7N);
+	p9.addObstacle(3, ob_6N);
+
+	//addPatternObstacle(p1);
+    //addPatternObstacle(p2);
     addPatternObstacle(p3);
-    addPatternObstacle(p4);
+	addPatternObstacle(p4);
+	addPatternObstacle(p5);
+	addPatternObstacle(p6);
+	addPatternObstacle(p7);
+	addPatternObstacle(p8);
+	addPatternObstacle(p9);
 }
 
 PatternObstacle PatternObstacleManager::getRandomPattern(int length, int start_height)

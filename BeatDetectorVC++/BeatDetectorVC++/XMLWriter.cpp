@@ -1,4 +1,7 @@
+#include <iostream>
+#include <iomanip>
 #include "XMLWriter.h"
+
 
 using namespace std;
 
@@ -7,7 +10,7 @@ using namespace std;
 XMLWriter::XMLWriter(string filename, string nom, int longueur, int bpm, float vitesse)
 {
 	os.open(filename);
-	os << "<niveau nom=\"" << nom << "\" longueur=\"" << longueur << "\" bpm=\"" << bpm << "\" vitesse=\"" << vitesse << "\"/>" << endl;
+	os << "<niveau nom=\"" << nom << "\" longueur=\"" << longueur << "\" bpm=\"" << bpm << "\" vitesse=\"" << setprecision(10) << vitesse << "\"/>" << endl;
 }
 
 bool XMLWriter::writeObstacle(Obstacle obs)

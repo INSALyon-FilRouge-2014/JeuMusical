@@ -214,7 +214,7 @@ void LevelGenerator::generateV3()
 
 
 	int mesure_length = 4;
-	int start_height = Obstacle::H_SOL-1;	//on demarre juste au dessus du sol
+	int start_height = Obstacle::H_SOL - 1;	//on demarre juste au dessus du sol
 	cout << start_height;
 	int num_beat = 0;
 	PatternObstacle pat;
@@ -238,24 +238,24 @@ void LevelGenerator::generateV3()
 			}
 			//chaque beat on récupère le vecteur d'obstacle lui correspondant dans le pattern			
 			vector<Obstacle> vec = pat.getObstacles()[num_beat];
-			
+
 			//si il y a des obstacles pour ce beat
 			for (auto it_vec = vec.begin(); it_vec != vec.end(); ++it_vec)
 			{
 				//on déroule les obstacles de ce beat
-				it_vec->setPositions(beatCounter*BLOCKS_BY_BEAT, i * 1024, PCMtoMS[i]);
+				it_vec->setPositions(beatCounter*BLOCKS_BY_BEAT + 1, i * 1024, PCMtoMS[i]);
 				obstList.push_back(*it_vec);
 				xml_writer->writeObstacle(*it_vec);
 
-				it_vec->setPositions(beatCounter*BLOCKS_BY_BEAT+1, i * 1024, PCMtoMS[i]);
+				it_vec->setPositions(beatCounter*BLOCKS_BY_BEAT + 2, i * 1024, PCMtoMS[i]);
 				obstList.push_back(*it_vec);
 				xml_writer->writeObstacle(*it_vec);
 			}
 
-			
+
 			tabObstacles[i] = new Obstacle(0, Obstacle::CAISSE);
 			beatCounter++;
 		}
 	}
-}
 
+}
